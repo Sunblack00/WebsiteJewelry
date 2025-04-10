@@ -1,15 +1,7 @@
-// import React from "react";
+import ListProduct from "../components/ListProduct";
+import { jewrlys } from "../../data/jewrlry";
 
-// export default function Product() {
-//   return <div></div>;
-// }
-
-import React from "react";
-import { Link } from "react-router-dom";
 export default function Product() {
-    return (
-        <Link to={`/product/1`}>
-            <div>Alo</div>
-        </Link>
-    );
+  const jewrly = jewrlys.slice(0, 6);
+  return <ListProduct products={jewrly}></ListProduct>;
 }
