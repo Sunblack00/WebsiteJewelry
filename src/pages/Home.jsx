@@ -14,7 +14,7 @@ export default function Home() {
       <Banner></Banner>
       <Hero></Hero>
       <CollectionSection></CollectionSection>
-      <p className="uppercase text-center text-xl font-semibold">
+      <p className="uppercase text-center text-xl font-semibold" style={{marginBottom: "-40px"}}>
         popular products
       </p>
       <ListProduct products={jewrly}></ListProduct>
