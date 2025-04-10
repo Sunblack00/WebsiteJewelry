@@ -22,7 +22,7 @@ export default function Banner() {
           {" "}
           We have over 10,000 of diamonds to choose from.
         </p>
-        <button className="px-10 py-3 mt-10 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent duration-300 border border-white cursor-pointer">
+        <button className="px-10 py-3 mt-10 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent duration-300 border border-white cursor-pointer hover:text-white">
           Shop now
         </button>
       </div>

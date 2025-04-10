@@ -4,13 +4,13 @@ export default function CollectionSection() {
   return (
     <div
       className="grid grid-cols-3 gap-8 m-auto my-20"
-      style={{ width: "80%" }}
+      style={{ width: "70%" }}
     >
-      <div className="border border-gray-300 relative cursor-pointer">
+      <div className="border border-gray-300 relative cursor-pointer group">
         <img
           src="../images/home/ring.png"
           alt=""
-          className="w-full object-cover hover:opacity-60 duration-300"
+          className="w-full object-cover group-hover:opacity-60 duration-300"
         />
         <p
           style={{ fontFamily: "Allura, cursive" }}
@@ -19,11 +19,11 @@ export default function CollectionSection() {
           Ring
         </p>
       </div>
-      <div className="border border-gray-300 relative cursor-pointer">
+      <div className="border border-gray-300 relative cursor-pointer group">
         <img
           src="../images/home/necklace.png"
           alt=""
-          className="w-full hover:opacity-60 duration-300"
+          className="w-full group-hover:opacity-60 duration-300"
         />
         <p
           style={{ fontFamily: "Allura, cursive" }}
@@ -32,11 +32,11 @@ export default function CollectionSection() {
           Necklace
         </p>
       </div>
-      <div className="border border-gray-300 relative cursor-pointer">
+      <div className="border border-gray-300 relative cursor-pointer group">
         <img
           src="../images/home/bracelet.png"
           alt=""
-          className=" w-full hover:opacity-60 duration-300"
+          className=" w-full group-hover:opacity-60 duration-300"
         />
         <p
           style={{ fontFamily: "Allura, cursive" }}
