@@ -1,0 +1,82 @@
+[
+    {
+        "uk_au_nz": 4,
+        "at_ch_de": 32,
+        "be_es_fr": 34,
+        "italy": 38,
+        "by_ru_ua": 36,
+        "us": 2
+    },
+    {
+        "uk_au_nz": 6,
+        "at_ch_de": 34,
+        "be_es_fr": 36,
+        "italy": 40,
+        "by_ru_ua": 38,
+        "us": 4
+    },
+    {
+        "uk_au_nz": 8,
+        "at_ch_de": 36,
+        "be_es_fr": 38,
+        "italy": 42,
+        "by_ru_ua": 40,
+        "us": 6
+    },
+    {
+        "uk_au_nz": 10,
+        "at_ch_de": 38,
+        "be_es_fr": 40,
+        "italy": 44,
+        "by_ru_ua": 42,
+        "us": 8
+    },
+    {
+        "uk_au_nz": 12,
+        "at_ch_de": 40,
+        "be_es_fr": 42,
+        "italy": 46,
+        "by_ru_ua": 44,
+        "us": 10
+    },
+    {
+        "uk_au_nz": 14,
+        "at_ch_de": 42,
+        "be_es_fr": 44,
+        "italy": 48,
+        "by_ru_ua": 46,
+        "us": 12
+    },
+    {
+        "uk_au_nz": 16,
+        "at_ch_de": 44,
+        "be_es_fr": 46,
+        "italy": 50,
+        "by_ru_ua": 48,
+        "us": 14
+    },
+    {
+        "uk_au_nz": 22,
+        "at_ch_de": 46,
+        "be_es_fr": 48,
+        "italy": 52,
+        "by_ru_ua": 50,
+        "us": 16
+    },
+    {
+        "uk_au_nz": 24,
+        "at_ch_de": 48,
+        "be_es_fr": 50,
+        "italy": 54,
+        "by_ru_ua": 52,
+        "us": 22
+    },
+    {
+        "uk_au_nz": 26,
+        "at_ch_de": 50,
+        "be_es_fr": 52,
+        "italy": 56,
+        "by_ru_ua": 54,
+        "us": 24
+    }
+]

@@ -1,0 +1,1039 @@
+[
+    {
+        "id": 1,
+        "name": "Out of Retirement Block Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-1_a.png",
+            "../images/product/ring-1_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "White Gold",
+                "price": 79.0,
+                "quantity": 5
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 82.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "Rose Gold",
+                "price": 85.0,
+                "quantity": 0
+            }
+        ],
+        "recentlySold": 10,
+        "productDetails": {
+            "fitAndStyle": ["Classic", "Elegant"],
+            "composition": "18K White Gold",
+            "clarity": "VVS1",
+            "diamondWeight": "1.00 ct",
+            "totalNumber": 1,
+            "care": "Clean with a soft cloth"
+        },
+        "shortDescription": "This beautifully handcrafted ring embodies timeless elegance with a perfect blend of diamonds, emeralds, and gold.",
+        "detailedDescription": [
+            "Our Out of Retirement Block Ring represents the elegance and luxury of the highest-quality materials. Crafted from 18K white gold, featuring a flawless diamond center stone, this ring is perfect for those who value both beauty and sophistication.",
+            "The emerald and diamond pairing reflects classic opulence, making this ring ideal for both casual and formal occasions. Its unique design will capture attention wherever you go.",
+            "This ring isn't just an accessory, it's a statement of your refined taste and appreciation for exquisite craftsmanship."
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Eternal Grace Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-2_a.png",
+            "../images/product/ring-2_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "White Gold",
+                "price": 90.0,
+                "quantity": 5
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 92.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "Rose Gold",
+                "price": 95.0,
+                "quantity": 2
+            }
+        ],
+        "recentlySold": 8,
+        "productDetails": {
+            "fitAndStyle": ["Elegant", "Modern"],
+            "composition": "18K Yellow Gold",
+            "clarity": "VS2",
+            "diamondWeight": "1.20 ct",
+            "totalNumber": 1,
+            "care": "Polish with a jewelry cloth"
+        },
+        "shortDescription": "The Eternal Grace Ring combines ruby and diamond in a stunning blend of sophistication and modern charm.",
+        "detailedDescription": [
+            "Designed for those with an eye for modern luxury, the Eternal Grace Ring combines the timeless beauty of rubies with the brilliance of diamonds. Set in 18K yellow gold, this piece offers a sophisticated yet contemporary look.",
+            "Its flawless craftsmanship and eye-catching design make it a perfect choice for anyone looking to make a bold yet elegant statement.",
+            "Wear this ring with confidence, knowing it will never go out of style."
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Radiance Diamond Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-3_a.png",
+            "../images/product/ring-3_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "White Gold",
+                "price": 85.0,
+                "quantity": 4
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 87.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "Rose Gold",
+                "price": 90.0,
+                "quantity": 0
+            }
+        ],
+        "recentlySold": 9,
+        "productDetails": {
+            "fitAndStyle": ["Sophisticated", "Fashionable"],
+            "composition": "18K Rose Gold",
+            "clarity": "VVS2",
+            "diamondWeight": "1.50 ct",
+            "totalNumber": 1,
+            "care": "Keep away from direct sunlight"
+        },
+        "shortDescription": "The Radiance Diamond Ring brings together emerald and diamond stones with a touch of rose gold, creating a strikingly elegant look.",
+        "detailedDescription": [
+            "This luxurious ring features a brilliant emerald paired with sparkling diamonds, all set in a stunning 18K rose gold band. The perfect choice for those who desire both beauty and prestige.",
+            "Its unique design and perfect proportions make it ideal for any formal event, as it captures both elegance and modernity.",
+            "With a diamond weight of 1.50 ct, the Radiance Diamond Ring is an investment in both timeless beauty and enduring style."
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Celestial Harmony Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-4_a.png",
+            "../images/product/ring-4_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "White Gold",
+                "price": 100.0,
+                "quantity": 0
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 105.0,
+                "quantity": 5
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "Rose Gold",
+                "price": 110.0,
+                "quantity": 3
+            }
+        ],
+        "recentlySold": 6,
+        "productDetails": {
+            "fitAndStyle": ["Luxury", "Exclusive"],
+            "composition": "18K White Gold",
+            "clarity": "VVS1",
+            "diamondWeight": "2.00 ct",
+            "totalNumber": 1,
+            "care": "Clean with warm water and soap"
+        },
+        "shortDescription": "The Celestial Harmony Ring features a radiant diamond and ruby set in luxurious white gold, capturing the essence of beauty and elegance.",
+        "detailedDescription": [
+            "Inspired by the stars, the Celestial Harmony Ring brings the beauty of the night sky to your fingertips. The combination of diamond and ruby, set in white gold, creates a mesmerizing effect that will captivate anyone who gazes at it.",
+            "This ring is perfect for special occasions, providing a touch of luxury and sophistication to any outfit.",
+            "The exceptional clarity of the diamonds and the rich hue of the ruby make it a true statement piece that will never go out of style."
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Golden Twilight Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-5_a.png",
+            "../images/product/ring-5_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "Yellow Gold",
+                "price": 120.0,
+                "quantity": 7
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Rose Gold",
+                "price": 125.0,
+                "quantity": 5
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "White Gold",
+                "price": 130.0,
+                "quantity": 2
+            }
+        ],
+        "recentlySold": 12,
+        "productDetails": {
+            "fitAndStyle": ["Elegant", "Refined"],
+            "composition": "18K Yellow Gold",
+            "clarity": "VVS1",
+            "diamondWeight": "1.20 ct",
+            "totalNumber": 1,
+            "care": "Use jewelry cleaner regularly"
+        },
+        "shortDescription": "The Golden Twilight Ring combines the elegance of diamonds with a rich emerald in a luxurious yellow gold setting.",
+        "detailedDescription": [
+            "Crafted with the finest materials, the Golden Twilight Ring features a brilliant emerald and diamond centerpiece, set in 18K yellow gold. Its luxurious design is perfect for those who appreciate refined beauty.",
+            "This ring is ideal for those seeking a statement piece that combines elegance with a modern flair."
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Luminous Radiance Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-6_a.png",
+            "../images/product/ring-6_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "White Gold",
+                "price": 150.0,
+                "quantity": 4
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 155.0,
+                "quantity": 6
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "Rose Gold",
+                "price": 160.0,
+                "quantity": 1
+            }
+        ],
+        "recentlySold": 7,
+        "productDetails": {
+            "fitAndStyle": ["Timeless", "Classic"],
+            "composition": "18K White Gold",
+            "clarity": "VS1",
+            "diamondWeight": "1.60 ct",
+            "totalNumber": 1,
+            "care": "Use soft cloth for cleaning"
+        },
+        "shortDescription": "A truly exquisite design with diamond and ruby set in 18K white gold, the Luminous Radiance Ring shines with sophistication.",
+        "detailedDescription": [
+            "The Luminous Radiance Ring features a stunning combination of diamond and ruby stones, set in 18K white gold, making it a perfect piece for those who value both modernity and elegance.",
+            "Its classic yet contemporary design makes it versatile for various occasions, ensuring you will always look your best."
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Mystic Light Ring",
+        "type": "Ring",
+        "images": [
+            "../images/product/ring-7_a.png",
+            "../images/product/ring-7_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "sizes": [16, 17, 19, 31],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "size": 16,
+                "metal": "White Gold",
+                "price": 170.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Emerald",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 175.0,
+                "quantity": 0
+            },
+            {
+                "stone": "Ruby",
+                "size": 19,
+                "metal": "Rose Gold",
+                "price": 180.0,
+                "quantity": 5
+            }
+        ],
+        "recentlySold": 4,
+        "productDetails": {
+            "fitAndStyle": ["Luxurious", "Elegant"],
+            "composition": "18K Yellow Gold",
+            "clarity": "VVS1",
+            "diamondWeight": "1.70 ct",
+            "totalNumber": 1,
+            "care": "Clean with a soft cloth"
+        },
+        "shortDescription": "The Mystic Light Ring combines brilliant diamonds and rubies in a stunning rose gold band, making it a perfect choice for any occasion.",
+        "detailedDescription": [
+            "With its dazzling diamond and ruby stones, the Mystic Light Ring exudes sophistication and elegance. Set in 18K rose gold, it’s designed for those who love luxury.",
+            "This is a statement piece that will always catch the eye and bring a touch of glamour to any look."
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Necklace of Serenity",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-8_a.png",
+            "../images/product/necklace-8_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 200.0,
+                "quantity": 5
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 210.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 220.0,
+                "quantity": 0
+            }
+        ],
+        "recentlySold": 8,
+        "productDetails": {
+            "fitAndStyle": ["Elegant", "Timeless"],
+            "composition": "18K White Gold",
+            "clarity": "VVS1",
+            "gemstoneWeight": "1.50 ct",
+            "totalNumber": 1,
+            "care": "Clean with a soft cloth"
+        },
+        "shortDescription": "An elegant necklace featuring a stunning diamond centerpiece, perfect for any occasion.",
+        "detailedDescription": [
+            "The Necklace of Serenity showcases a brilliant diamond set in 18K white gold, exuding timeless elegance and sophistication.",
+            "Its versatile design makes it suitable for both formal events and everyday wear, adding a touch of luxury to any outfit.",
+            "Crafted with meticulous attention to detail, this necklace is a testament to fine craftsmanship and exquisite materials."
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Emerald Elegance Necklace",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-9_a.png",
+            "../images/product/necklace-9_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 250.0,
+                "quantity": 4
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 260.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 270.0,
+                "quantity": 1
+            }
+        ],
+        "recentlySold": 6,
+        "productDetails": {
+            "fitAndStyle": ["Sophisticated", "Chic"],
+            "composition": "18K Yellow Gold",
+            "clarity": "VS1",
+            "gemstoneWeight": "2.00 ct",
+            "totalNumber": 1,
+            "care": "Avoid exposure to chemicals"
+        },
+        "shortDescription": "A sophisticated necklace adorned with a captivating emerald, set in luxurious yellow gold.",
+        "detailedDescription": [
+            "The Emerald Elegance Necklace features a vibrant emerald gemstone, beautifully complemented by its 18K yellow gold setting.",
+            "This piece exudes sophistication and is perfect for those who appreciate bold and colorful jewelry.",
+            "Whether worn alone or layered with other pieces, this necklace adds a touch of elegance to any ensemble."
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Ruby Radiance Necklace",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-10_a.png",
+            "../images/product/necklace-10_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 230.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 240.0,
+                "quantity": 0
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 250.0,
+                "quantity": 2
+            }
+        ],
+        "recentlySold": 7,
+        "productDetails": {
+            "fitAndStyle": ["Bold", "Statement"],
+            "composition": "18K Rose Gold",
+            "clarity": "VVS2",
+            "gemstoneWeight": "1.80 ct",
+            "totalNumber": 1,
+            "care": "Store in a jewelry box"
+        },
+        "shortDescription": "A bold necklace featuring a radiant ruby, making a striking statement.",
+        "detailedDescription": [
+            "The Ruby Radiance Necklace is designed for those who love to make a statement with their jewelry.",
+            "Featuring a stunning ruby set in 18K rose gold, this necklace is both bold and elegant.",
+            "Perfect for special occasions or to add a pop of color to your everyday look."
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Twilight Glow Necklace",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-11_a.png",
+            "../images/product/necklace-11_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 245.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 238.0,
+                "quantity": 1
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 255.0,
+                "quantity": 3
+            }
+        ],
+        "recentlySold": 7,
+        "productDetails": {
+            "fitAndStyle": ["Elegant", "Contemporary"],
+            "composition": "18K Gold",
+            "clarity": "VS1",
+            "gemstoneWeight": "1.75 ct",
+            "totalNumber": 1,
+            "care": "Avoid contact with perfume"
+        },
+        "shortDescription": "Modern elegance meets classic design in this stunning necklace crafted for graceful evenings.",
+        "detailedDescription": [
+            "Crafted for modern royalty, the Twilight Glow Necklace brings together exquisite design and radiant gemstones.",
+            "With a brilliant interplay of gold and stones, this necklace is perfect for both special occasions and daily luxury.",
+            "Its craftsmanship and vibrant colors make it a signature addition to any collection."
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Celestial Dream Necklace",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-12_a.png",
+            "../images/product/necklace-12_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 265.0,
+                "quantity": 4
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 258.0,
+                "quantity": 0
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 272.0,
+                "quantity": 2
+            }
+        ],
+        "recentlySold": 6,
+        "productDetails": {
+            "fitAndStyle": ["Luxury", "Graceful"],
+            "composition": "Platinum",
+            "clarity": "VVS2",
+            "gemstoneWeight": "2.00 ct",
+            "totalNumber": 1,
+            "care": "Clean with mild soapy water"
+        },
+        "shortDescription": "Let your dreams shine through with this delicate, celestial-inspired necklace.",
+        "detailedDescription": [
+            "Inspired by the constellations, the Celestial Dream Necklace is a fusion of dreamlike elegance and precious beauty.",
+            "It captures the soft glow of starlight with carefully chosen gemstones and gleaming metalwork.",
+            "Perfect for those who love subtle sparkle and timeless charm."
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Goddess Whisper Necklace",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-13_a.png",
+            "../images/product/necklace-13_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 278.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 270.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 284.0,
+                "quantity": 1
+            }
+        ],
+        "recentlySold": 9,
+        "productDetails": {
+            "fitAndStyle": ["Mythical", "Bold"],
+            "composition": "18K Rose Gold",
+            "clarity": "VS2",
+            "gemstoneWeight": "1.90 ct",
+            "totalNumber": 1,
+            "care": "Store in a soft pouch"
+        },
+        "shortDescription": "A bold piece whispering ancient goddess energy, forged in stone and gold.",
+        "detailedDescription": [
+            "Feel empowered with the Goddess Whisper Necklace — a masterpiece that radiates strength and divine beauty.",
+            "Each curve and glimmer tells the story of legendary femininity and inner power.",
+            "Perfect for bold personalities and divine spirits alike."
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Ocean Heart Necklace",
+        "type": "Necklace",
+        "images": [
+            "../images/product/necklace-14_a.png",
+            "../images/product/necklace-14_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [40, 45, 50],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 40,
+                "metal": "White Gold",
+                "price": 230.0,
+                "quantity": 0
+            },
+            {
+                "stone": "Emerald",
+                "length": 45,
+                "metal": "Yellow Gold",
+                "price": 220.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Ruby",
+                "length": 50,
+                "metal": "Rose Gold",
+                "price": 240.0,
+                "quantity": 5
+            }
+        ],
+        "recentlySold": 8,
+        "productDetails": {
+            "fitAndStyle": ["Romantic", "Fresh"],
+            "composition": "Sterling Silver",
+            "clarity": "VS1",
+            "gemstoneWeight": "1.60 ct",
+            "totalNumber": 1,
+            "care": "Rinse with warm water"
+        },
+        "shortDescription": "A romantic statement inspired by ocean waves and deep desires.",
+        "detailedDescription": [
+            "The Ocean Heart Necklace embodies the elegance of oceanic hues and the calm of the sea breeze.",
+            "A perfect blend of romantic design and nature-inspired curves makes it a must-have.",
+            "Wear it to carry the ocean’s love and power close to your heart."
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Graceful Touch Bracelet",
+        "type": "Bracelet",
+        "images": [
+            "../images/product/bracelet-15_a.png",
+            "../images/product/bracelet-15_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [16, 18, 20],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 16,
+                "metal": "White Gold",
+                "price": 150.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Emerald",
+                "length": 18,
+                "metal": "Yellow Gold",
+                "price": 140.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Ruby",
+                "length": 20,
+                "metal": "Rose Gold",
+                "price": 160.0,
+                "quantity": 4
+            }
+        ],
+        "recentlySold": 5,
+        "productDetails": {
+            "fitAndStyle": ["Delicate", "Flexible"],
+            "composition": "14K Gold",
+            "clarity": "VS2",
+            "gemstoneWeight": "0.90 ct",
+            "totalNumber": 1,
+            "care": "Keep away from chemicals"
+        },
+        "shortDescription": "A graceful design for everyday luxury and subtle sophistication.",
+        "detailedDescription": [
+            "The Graceful Touch Bracelet is made to complement your day with elegance.",
+            "It reflects light beautifully with its fine gemstones and quality metal.",
+            "A simple yet radiant piece to wear with any look."
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Starlight Beam Bracelet",
+        "type": "Bracelet",
+        "images": [
+            "../images/product/bracelet-16_a.png",
+            "../images/product/bracelet-16_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [16, 18, 20],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 16,
+                "metal": "White Gold",
+                "price": 180.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Emerald",
+                "length": 18,
+                "metal": "Yellow Gold",
+                "price": 170.0,
+                "quantity": 0
+            },
+            {
+                "stone": "Ruby",
+                "length": 20,
+                "metal": "Rose Gold",
+                "price": 185.0,
+                "quantity": 1
+            }
+        ],
+        "recentlySold": 6,
+        "productDetails": {
+            "fitAndStyle": ["Sparkly", "Chic"],
+            "composition": "18K Gold",
+            "clarity": "VS1",
+            "gemstoneWeight": "1.10 ct",
+            "totalNumber": 1,
+            "care": "Wipe with soft cloth"
+        },
+        "shortDescription": "A shining tribute to the stars above, sleek and radiant.",
+        "detailedDescription": [
+            "Inspired by the night sky, the Starlight Beam Bracelet adds charm and brilliance to your wrist.",
+            "It’s made for dreamers, with a sparkle that lasts through the day.",
+            "Let the stars be your guide in fashion and elegance."
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Whispering Leaves Bracelet",
+        "type": "Bracelet",
+        "images": [
+            "../images/product/bracelet-17_a.png",
+            "../images/product/bracelet-17_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [16, 18, 20],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 16,
+                "metal": "White Gold",
+                "price": 155.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Emerald",
+                "length": 18,
+                "metal": "Yellow Gold",
+                "price": 150.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Ruby",
+                "length": 20,
+                "metal": "Rose Gold",
+                "price": 165.0,
+                "quantity": 0
+            }
+        ],
+        "recentlySold": 4,
+        "productDetails": {
+            "fitAndStyle": ["Nature-inspired", "Elegant"],
+            "composition": "Sterling Silver",
+            "clarity": "VS2",
+            "gemstoneWeight": "0.80 ct",
+            "totalNumber": 1,
+            "care": "Avoid direct sunlight"
+        },
+        "shortDescription": "Nature’s whisper captured in a delicate and refined bracelet.",
+        "detailedDescription": [
+            "Let the gentle beauty of the forest wrap around your wrist.",
+            "This bracelet draws inspiration from leaves rustling in the breeze.",
+            "Ideal for lovers of nature and elegance alike."
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Sunrise Mist Bracelet",
+        "type": "Bracelet",
+        "images": [
+            "../images/product/bracelet-18_a.png",
+            "../images/product/bracelet-18_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [16, 18, 20],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 16,
+                "metal": "White Gold",
+                "price": 172.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Emerald",
+                "length": 18,
+                "metal": "Yellow Gold",
+                "price": 160.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Ruby",
+                "length": 20,
+                "metal": "Rose Gold",
+                "price": 178.0,
+                "quantity": 1
+            }
+        ],
+        "recentlySold": 5,
+        "productDetails": {
+            "fitAndStyle": ["Morning Fresh", "Classic"],
+            "composition": "14K Gold",
+            "clarity": "VVS2",
+            "gemstoneWeight": "0.95 ct",
+            "totalNumber": 1,
+            "care": "Clean with jewelry polish"
+        },
+        "shortDescription": "Fresh as the dawn, this bracelet brings new light to any look.",
+        "detailedDescription": [
+            "Inspired by the early morning mist, the Sunrise Mist Bracelet brings a soft glow to your style.",
+            "Elegant yet understated, it's perfect for casual mornings and classy evenings.",
+            "A must-have for the modern minimalist."
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Royal Charm Bracelet",
+        "type": "Bracelet",
+        "images": [
+            "../images/product/bracelet-19_a.png",
+            "../images/product/bracelet-19_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [16, 18, 20],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 16,
+                "metal": "White Gold",
+                "price": 185.0,
+                "quantity": 1
+            },
+            {
+                "stone": "Emerald",
+                "length": 18,
+                "metal": "Yellow Gold",
+                "price": 172.0,
+                "quantity": 3
+            },
+            {
+                "stone": "Ruby",
+                "length": 20,
+                "metal": "Rose Gold",
+                "price": 190.0,
+                "quantity": 0
+            }
+        ],
+        "recentlySold": 8,
+        "productDetails": {
+            "fitAndStyle": ["Regal", "Classic"],
+            "composition": "18K Gold",
+            "clarity": "VS1",
+            "gemstoneWeight": "1.20 ct",
+            "totalNumber": 1,
+            "care": "Store in jewelry box"
+        },
+        "shortDescription": "A bracelet fit for royalty, shining with timeless allure.",
+        "detailedDescription": [
+            "The Royal Charm Bracelet is a symbol of poise and heritage.",
+            "Crafted to reflect traditional elegance, it’s a piece that tells a story of legacy and charm.",
+            "Add noble flair to any outfit."
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Velvet Sky Bracelet",
+        "type": "Bracelet",
+        "images": [
+            "../images/product/bracelet-20_a.png",
+            "../images/product/bracelet-20_b.png"
+        ],
+        "options": {
+            "stones": ["Diamond", "Emerald", "Ruby"],
+            "lengths": [16, 18, 20],
+            "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
+        },
+        "variants": [
+            {
+                "stone": "Diamond",
+                "length": 16,
+                "metal": "White Gold",
+                "price": 192.0,
+                "quantity": 4
+            },
+            {
+                "stone": "Emerald",
+                "length": 18,
+                "metal": "Yellow Gold",
+                "price": 182.0,
+                "quantity": 2
+            },
+            {
+                "stone": "Ruby",
+                "length": 20,
+                "metal": "Rose Gold",
+                "price": 198.0,
+                "quantity": 1
+            }
+        ],
+        "recentlySold": 7,
+        "productDetails": {
+            "fitAndStyle": ["Elegant", "Evening Wear"],
+            "composition": "Platinum",
+            "clarity": "VVS1",
+            "gemstoneWeight": "1.30 ct",
+            "totalNumber": 1,
+            "care": "Polish with microfiber cloth"
+        },
+        "shortDescription": "Evening elegance captured in a soft, shimmering bracelet.",
+        "detailedDescription": [
+            "Velvet Sky Bracelet embodies the mystery and elegance of the night sky.",
+            "Its deep tones and sparkle are perfect for sophisticated settings.",
+            "Slip it on and feel like you're draped in twilight."
+        ]
+    }
+]
