@@ -8,16 +8,16 @@ export default function ListProduct({ products }) {
         className="grid grid-cols-3 gap-8 m-auto my-20"
         style={{ width: "70%" }}
       >
-        {products.map((item) => (
-          <div>
+        {products.map((item, index) => (
+          <div key={index}>
             <div
-              className="border border-gray-300 cursor-pointer group relative overflow-hidden"
-              style={{ boxShadow: "0px 0px 15px #0000001a", height: "450px" }}
+              className="border border-gray-300 cursor-pointer group relative overflow-hidden "
+              style={{ boxShadow: "0px 0px 15px #0000001a" }}
             >
               <img
                 src={item.images[0]}
                 alt=""
-                className="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+                className="w-full h-full aspect-[3/4] transition-opacity duration-300 group-hover:opacity-0"
               />
 
               <img
