@@ -16,7 +16,7 @@ export default function Hero() {
           >
             Collection
           </p>
-          <button className="px-10 py-3 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent hover:text-white duration-300 border border-white">
+          <button className="px-10 py-3 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent hover:text-white duration-300 border border-white cursor-pointer">
             Shop now
           </button>
         </div>
@@ -35,7 +35,7 @@ export default function Hero() {
           >
             Product
           </p>
-          <button className="px-10 py-3 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent hover:text-white duration-300 border border-white">
+          <button className="px-10 py-3 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent hover:text-white duration-300 border border-white cursor-pointer">
             Shop now
           </button>
         </div>
