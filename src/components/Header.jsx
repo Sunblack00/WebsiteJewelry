@@ -20,7 +20,7 @@ export default function Header() {
     const quantity = cartItems.length;
     return (
         <div className="sticky top-0 z-50 bg-white shadow-md">
-            <div className="md:container mx-auto flex items-center justify-between py-4">
+            <div className="md:container mx-auto flex items-center justify-between py-4 pl-20">
                 <Link to={"/"}>
                     <img src={logo} alt="logo" />
                 </Link>
