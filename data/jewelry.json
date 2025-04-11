@@ -21,6 +21,13 @@
                 "quantity": 5
             },
             {
+                "stone": "Diamond",
+                "size": 17,
+                "metal": "Yellow Gold",
+                "price": 79.0,
+                "quantity": 10
+            },
+            {
                 "stone": "Emerald",
                 "size": 17,
                 "metal": "Yellow Gold",
@@ -32,7 +39,7 @@
                 "size": 19,
                 "metal": "Rose Gold",
                 "price": 85.0,
-                "quantity": 0
+                "quantity": 15
             }
         ],
         "recentlySold": 10,
@@ -136,7 +143,7 @@
                 "size": 19,
                 "metal": "Rose Gold",
                 "price": 90.0,
-                "quantity": 0
+                "quantity": 20
             }
         ],
         "recentlySold": 9,
@@ -370,27 +377,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 200.0,
                 "quantity": 5
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 210.0,
                 "quantity": 3
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 220.0,
                 "quantity": 0
@@ -422,27 +429,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 250.0,
                 "quantity": 4
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 260.0,
                 "quantity": 2
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 270.0,
                 "quantity": 1
@@ -474,27 +481,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 230.0,
                 "quantity": 3
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 240.0,
                 "quantity": 0
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 250.0,
                 "quantity": 2
@@ -526,27 +533,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 245.0,
                 "quantity": 2
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 238.0,
                 "quantity": 1
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 255.0,
                 "quantity": 3
@@ -578,27 +585,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 265.0,
                 "quantity": 4
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 258.0,
                 "quantity": 0
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 272.0,
                 "quantity": 2
@@ -630,27 +637,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 278.0,
                 "quantity": 3
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 270.0,
                 "quantity": 2
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 284.0,
                 "quantity": 1
@@ -682,27 +689,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [40, 45, 50],
+            "sizes": [16, 17, 19, 31],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 40,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 230.0,
                 "quantity": 0
             },
             {
                 "stone": "Emerald",
-                "length": 45,
+                "size": 17,
                 "metal": "Yellow Gold",
                 "price": 220.0,
                 "quantity": 3
             },
             {
                 "stone": "Ruby",
-                "length": 50,
+                "size": 18,
                 "metal": "Rose Gold",
                 "price": 240.0,
                 "quantity": 5
@@ -734,27 +741,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [16, 18, 20],
+            "sizes": [16, 18, 20],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 16,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 150.0,
                 "quantity": 3
             },
             {
                 "stone": "Emerald",
-                "length": 18,
+                "size": 18,
                 "metal": "Yellow Gold",
                 "price": 140.0,
                 "quantity": 2
             },
             {
                 "stone": "Ruby",
-                "length": 20,
+                "size": 20,
                 "metal": "Rose Gold",
                 "price": 160.0,
                 "quantity": 4
@@ -786,27 +793,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [16, 18, 20],
+            "sizes": [16, 18, 20],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 16,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 180.0,
                 "quantity": 2
             },
             {
                 "stone": "Emerald",
-                "length": 18,
+                "size": 18,
                 "metal": "Yellow Gold",
                 "price": 170.0,
                 "quantity": 0
             },
             {
                 "stone": "Ruby",
-                "length": 20,
+                "size": 20,
                 "metal": "Rose Gold",
                 "price": 185.0,
                 "quantity": 1
@@ -838,27 +845,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [16, 18, 20],
+            "sizes": [16, 18, 20],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 16,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 155.0,
                 "quantity": 2
             },
             {
                 "stone": "Emerald",
-                "length": 18,
+                "size": 18,
                 "metal": "Yellow Gold",
                 "price": 150.0,
                 "quantity": 3
             },
             {
                 "stone": "Ruby",
-                "length": 20,
+                "size": 20,
                 "metal": "Rose Gold",
                 "price": 165.0,
                 "quantity": 0
@@ -890,27 +897,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [16, 18, 20],
+            "sizes": [16, 18, 20],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 16,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 172.0,
                 "quantity": 3
             },
             {
                 "stone": "Emerald",
-                "length": 18,
+                "size": 18,
                 "metal": "Yellow Gold",
                 "price": 160.0,
                 "quantity": 2
             },
             {
                 "stone": "Ruby",
-                "length": 20,
+                "size": 20,
                 "metal": "Rose Gold",
                 "price": 178.0,
                 "quantity": 1
@@ -942,27 +949,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [16, 18, 20],
+            "sizes": [16, 18, 20],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 16,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 185.0,
                 "quantity": 1
             },
             {
                 "stone": "Emerald",
-                "length": 18,
+                "size": 18,
                 "metal": "Yellow Gold",
                 "price": 172.0,
                 "quantity": 3
             },
             {
                 "stone": "Ruby",
-                "length": 20,
+                "size": 20,
                 "metal": "Rose Gold",
                 "price": 190.0,
                 "quantity": 0
@@ -994,27 +1001,27 @@
         ],
         "options": {
             "stones": ["Diamond", "Emerald", "Ruby"],
-            "lengths": [16, 18, 20],
+            "sizes": [16, 18, 20],
             "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
         },
         "variants": [
             {
                 "stone": "Diamond",
-                "length": 16,
+                "size": 16,
                 "metal": "White Gold",
                 "price": 192.0,
                 "quantity": 4
             },
             {
                 "stone": "Emerald",
-                "length": 18,
+                "size": 18,
                 "metal": "Yellow Gold",
                 "price": 182.0,
                 "quantity": 2
             },
             {
                 "stone": "Ruby",
-                "length": 20,
+                "size": 20,
                 "metal": "Rose Gold",
                 "price": 198.0,
                 "quantity": 1

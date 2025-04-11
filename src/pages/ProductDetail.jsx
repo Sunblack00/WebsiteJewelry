@@ -1,34 +1,151 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import JEWELRY from "../../data/jewelry.json";
+
+import { FaFire } from "react-icons/fa6";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import InputQuantity from "../components/ProductDetails/InputQuantity";
+import { currencyFormatter } from "../util/formatting";
+import { useState } from "react";
+import FigureProduct from "../components/ProductDetails/FigureProduct";
+import ModalSizeGuide from "../components/ProductDetails/ModalSizeGuide";
+import MoreProductInfo from "../components/ProductDetails/MoreProductInfo";
+import ProductOption from "../components/ProductDetails/ProductOption";
 export default function ProductDetail() {
+    const { id } = useParams();
+    const item = JEWELRY.find((item) => item.id === parseInt(id));
+    const [isModal, setIsModal] = useState(false);
+    const [isOpen, setIsOpen] = useState({
+        des: false,
+        detail: false,
+    });
+    const [selectedOption, setSelectedOption] = useState({
+        stone: item.options.stones[0],
+        size: item.options.sizes[0],
+        metal: item.options.metals[0],
+    });
+    const options = item.options;
+    const variants = item.variants;
+    const [quantity, setQuantity] = useState(variants[0].quantity);
+    const [price, setPrice] = useState(variants[0].price);
+
+    // Phuong thuc chon stone
+    function handleOption(type, value) {
+        const updated = {
+            ...selectedOption,
+            [type]: value,
+        };
+        const variant = variants.find(
+            (v) =>
+                v.stone === updated.stone &&
+                v.size === updated.size &&
+                v.metal === updated.metal
+        );
+        const va = variants.find((v) => v.stone === updated.stone);
+        console.log(variant);
+        setSelectedOption(updated);
+        setPrice(va.price);
+        setQuantity(variant?.quantity || 0);
+    }
+
+    // Phuong thuc mo modal size
+    function handleModal() {
+        setIsModal(!isModal);
+    }
+
+    // Phuong thuc de hien thi them thong tin chi tiet
+    function handleOpen(type) {
+        setIsOpen((prevOpen) => ({
+            ...prevOpen,
+            [type]: !prevOpen[type],
+        }));
+    }
+
     return (
         <div className="container py-12 h-[1000000px]">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
-                <figure className="col-span-3">
-                    <div className="flex justify-center">
-                        <img
-                            src="../../public/images/product/ring1_a.png"
-                            alt=""
-                            className="border border-stone-400 object-cover rounded-sm h-[550px] w-[90%]"
-                        />
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
+                <FigureProduct images={item.images} />
+                <section className="col-span-2">
+                    {quantity > 0 ? (
+                        <span className="text-[15px] bg-green-600 px-2 py-1 text-white rounded-sm">
+                            In Stock
+                        </span>
+                    ) : (
+                        <span className="text-[15px] bg-red-600 px-2 py-1 text-white rounded-sm">
+                            Out Stock
+                        </span>
+                    )}
+
+                    <h1 className="text-[30px] font-bold mt-2">{item.name}</h1>
+                    <span className="inline-block mt-2 text-4xl font-sans italic ">
+                        {currencyFormatter.format(price)}
+                    </span>
+                    <ProductOption
+                        selectedOption={selectedOption}
+                        option={"stones"}
+                        value={"stone"}
+                        options={options}
+                        onOption={handleOption}
+                        onModal={handleModal}
+                    />
+                    <ProductOption
+                        selectedOption={selectedOption}
+                        option={"sizes"}
+                        value={"size"}
+                        options={options}
+                        onOption={handleOption}
+                        onModal={handleModal}
+                    />
+
+                    <ProductOption
+                        selectedOption={selectedOption}
+                        option={"metals"}
+                        value={"metal"}
+                        options={options}
+                        onOption={handleOption}
+                        onModal={handleModal}
+                    />
+                    <div className="flex mt-5 gap-3 items-center">
+                        <FaFire />
+                        <span className="font-light text-lg">
+                            <strong>{item.recentlySold} </strong>
+                            sold in recently
+                        </span>
                     </div>
-                    <div className="mt-5 flex justify-center">
-                        <div className="flex gap-5 w-[90%] justify-center">
-                            <img
-                                src="../../public/images/product/ring1_a.png"
-                                alt=""
-                                className="h-[6rem] object-cover border border-stone-400 cursor-pointer opacity-70 hover:opacity-100"
-                            />
-                            <img
-                                src="../../public/images/product/ring1_b.png"
-                                alt=""
-                                className="h-[6rem] object-cover border border-stone-400 cursor-pointer opacity-70 hover:opacity-100"
-                            />
-                        </div>
+                    <p className="mt-5 text-lg font-sans">
+                        {item.shortDescription}
+                    </p>
+                    <div className="flex items-center gap-5">
+                        <InputQuantity />
+                        {quantity > 0 && (
+                            <span className="text-lg mt-4">
+                                Quantity: {quantity}
+                            </span>
+                        )}
                     </div>
-                </figure>
-                <section className="col-span-2"></section>
+                    <button
+                        disabled={quantity === 0}
+                        className={`border bg-black text-white mt-5 w-full py-2 font-bold flex items-center justify-center gap-3 ${
+                            quantity === 0 ? "opacity-50" : ""
+                        }`}
+                    >
+                        <HiOutlineShoppingBag size={"25px"} />
+                        <span>ADD TO CART</span>
+                    </button>
+                    <button
+                        className="mt-5 text-lg w-full font-semibold"
+                        disabled={quantity === 0}
+                    >
+                        Buy it now
+                    </button>
+                    <MoreProductInfo
+                        isOpen={isOpen}
+                        onOpen={handleOpen}
+                        descriptions={item.detailedDescription}
+                        productDetails={item.productDetails}
+                    />
+                </section>
             </div>
+            <ModalSizeGuide isOpen={isModal} onClose={handleModal} />
         </div>
     );
 }
