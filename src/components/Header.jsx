@@ -17,7 +17,7 @@ export default function Header() {
   ];
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="md:container mx-auto flex items-center justify-between py-4">
+      <div className="md:container mx-auto flex items-center justify-between py-4 pl-20">
         <Link to={"/"}>
           <img src={logo} alt="logo" />
         </Link>
@@ -55,7 +55,7 @@ export default function Header() {
             size={"25px"}
             className=" hover:opacity-25 transition-all duration-500"
           />
-          <div className="flex items-center space-x-2 hover:opacity-25 transition-all duration-500">
+          <div className="flex items-center space-x-2 hover:opacity-25 transition-all duration-500 pr-10">
             <HiOutlineShoppingBag size={"25px"} />
             <div className="w-6 h-6 rounded-4xl bg-black text-white text-center">
               0
