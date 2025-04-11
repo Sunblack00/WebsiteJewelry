@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-export default function InputQuantity() {
-    const [value, setValue] = useState(1);
+export default function InputQuantity({ value, onChange }) {
     // Phuong thuc dung de cap nhat quantity (Tang / Giam)
     function handleIncrement() {
-        setValue((prev) => prev + 1);
+        onChange((prev) => prev + 1);
     }
     function handleDecrement() {
         if (value > 1) {
-            setValue((prev) => prev - 1);
+            onChange((prev) => prev - 1);
         }
     }
     return (

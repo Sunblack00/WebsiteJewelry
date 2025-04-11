@@ -5,13 +5,16 @@ import { FaFire } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import InputQuantity from "../components/ProductDetails/InputQuantity";
 import { currencyFormatter } from "../util/formatting";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import FigureProduct from "../components/ProductDetails/FigureProduct";
 import ModalSizeGuide from "../components/ProductDetails/ModalSizeGuide";
 import MoreProductInfo from "../components/ProductDetails/MoreProductInfo";
 import ProductOption from "../components/ProductDetails/ProductOption";
+import { CartContext } from "../store/CartContext";
+import { image } from "motion/react-m";
 export default function ProductDetail() {
     const { id } = useParams();
+    const { addItemToCart } = useContext(CartContext);
     const item = JEWELRY.find((item) => item.id === parseInt(id));
     const [isModal, setIsModal] = useState(false);
     const [isOpen, setIsOpen] = useState({
@@ -27,6 +30,7 @@ export default function ProductDetail() {
     const variants = item.variants;
     const [quantity, setQuantity] = useState(variants[0].quantity);
     const [price, setPrice] = useState(variants[0].price);
+    const [quantityInput, setQuantityInput] = useState(1);
 
     // Phuong thuc chon stone
     function handleOption(type, value) {
@@ -41,7 +45,6 @@ export default function ProductDetail() {
                 v.metal === updated.metal
         );
         const va = variants.find((v) => v.stone === updated.stone);
-        console.log(variant);
         setSelectedOption(updated);
         setPrice(va.price);
         setQuantity(variant?.quantity || 0);
@@ -60,8 +63,20 @@ export default function ProductDetail() {
         }));
     }
 
+    // Phuong thuc them san pham vao gio hang
+    function handleAddItem(item) {
+        addItemToCart({
+            id: item.id,
+            name: item.name,
+            selectedOption: selectedOption,
+            quantity: quantityInput,
+            price,
+            total: price * quantity,
+        });
+    }
+
     return (
-        <div className="container py-12 h-[1000000px]">
+        <div className="container py-12 ">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
                 <FigureProduct images={item.images} />
                 <section className="col-span-2">
@@ -115,7 +130,10 @@ export default function ProductDetail() {
                         {item.shortDescription}
                     </p>
                     <div className="flex items-center gap-5">
-                        <InputQuantity />
+                        <InputQuantity
+                            value={quantityInput}
+                            onChange={setQuantityInput}
+                        />
                         {quantity > 0 && (
                             <span className="text-lg mt-4">
                                 Quantity: {quantity}
@@ -127,6 +145,7 @@ export default function ProductDetail() {
                         className={`border bg-black text-white mt-5 w-full py-2 font-bold flex items-center justify-center gap-3 ${
                             quantity === 0 ? "opacity-50" : ""
                         }`}
+                        onClick={handleAddItem}
                     >
                         <HiOutlineShoppingBag size={"25px"} />
                         <span>ADD TO CART</span>

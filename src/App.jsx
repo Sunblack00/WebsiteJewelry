@@ -8,20 +8,25 @@ import Product from "./pages/Product";
 import Blog from "./pages/Blog";
 import Account from "./components/Account";
 import ProductDetail from "./pages/ProductDetail";
+import CartProvider from "./store/CartContext";
+import Cart from "./pages/Cart";
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-      </Routes>
-    </>
-  );
+    return (
+        <>
+            <CartProvider>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/product" element={<Product />} />
+                    <Route path="/account" element={<Account />} />
+                    <Route path="/product/:id" element={<ProductDetail />} />
+                    <Route path="/cart" element={<Cart />} />
+                </Routes>
+            </CartProvider>
+        </>
+    );
 }
