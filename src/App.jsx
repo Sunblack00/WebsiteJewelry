@@ -10,11 +10,11 @@ import Account from "./components/Account";
 import ProductDetail from "./pages/ProductDetail";
 import Footer from "./components/Footer";
 import BlogDetail from "./pages/BlogDetail";
-
 import CartProvider from "./store/CartContext";
 import Cart from "./pages/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import Collection from "./pages/Collection";
 
 export default function App() {
   return (
@@ -30,6 +30,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/product/collection/:collection" element={<Product />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/collection" element={<Collection />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
