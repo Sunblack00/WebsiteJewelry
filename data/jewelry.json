@@ -7,6 +7,7 @@
       "../images/product/ring-1_a.png",
       "../images/product/ring-1_b.png"
     ],
+   "loc": "Products", 
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 17, 19, 31],
@@ -71,6 +72,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -123,6 +125,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -175,6 +178,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -227,6 +231,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -278,6 +283,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -329,6 +335,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -380,6 +387,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -432,6 +440,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -484,6 +493,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -536,6 +546,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -588,6 +599,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -640,6 +652,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -692,6 +705,7 @@
       "sizes": [16, 17, 19, 31],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -744,6 +758,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -796,6 +811,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -848,6 +864,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -900,6 +917,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -952,6 +970,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -1004,6 +1023,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Yellow Gold", "Rose Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -1056,6 +1076,7 @@
       "sizes": [16, 18, 20],
       "metals": ["Silver", "Gold", "Platinum"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Sapphire",
@@ -1108,6 +1129,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Rose Gold", "Silver"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Moonstone",
@@ -1160,6 +1182,7 @@
       "sizes": [16, 18, 20],
       "metals": ["Gold", "Platinum", "Titanium"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Ruby",
@@ -1212,6 +1235,7 @@
       "sizes": [16, 18, 20],
       "metals": ["Titanium", "Stainless Steel", "Black Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Black Diamond",
@@ -1264,6 +1288,7 @@
       "sizes": [16, 18, 20],
       "metals": ["Rose Gold", "Silver", "White Gold"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Opal",
@@ -1316,6 +1341,7 @@
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Platinum", "Silver"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Diamond",
@@ -1368,6 +1394,7 @@
       "sizes": [16, 18, 20],
       "metals": ["Gold", "Rose Gold", "Bronze"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Ruby",
@@ -1420,6 +1447,7 @@
       "sizes": [16, 18, 20],
       "metals": ["Yellow Gold", "Bronze", "Brass"]
     },
+    "loc": "Products",
     "variants": [
       {
         "stone": "Citrine",

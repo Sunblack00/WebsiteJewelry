@@ -14,6 +14,7 @@ import Cart from "./pages/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Collection from "./pages/Collection";
+import SearchResults from "./pages/SearchResults";
 
 import Profile from "./pages/Profile";
 import Account from "./pages/Account";
@@ -39,8 +40,10 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/search" element={<SearchResults />} />
         </Routes>
         <Footer />
+       
       </CartProvider>
     </AuthProvider>
   );

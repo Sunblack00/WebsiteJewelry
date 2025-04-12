@@ -14,6 +14,7 @@ const BlogDetail = () => {
   });
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""); // State lưu giá trị tìm kiếm
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -58,6 +59,11 @@ const BlogDetail = () => {
     setError("");
     setFormData({ name: "", email: "", message: "" });
   };
+  // Hàm xử lý sự kiện khi người dùng nhấn nút tìm kiếm
+  const handleSearch = () => {
+    // Điều hướng tới trang tìm kiếm với từ khóa tìm kiếm trong URL
+    navigate(`/search?query=${searchQuery}`);
+  };
 
   const currentIndex = blogList.findIndex((b) => b.id === parseInt(id));
   const prevBlog = blogList[currentIndex - 1];
@@ -65,13 +71,6 @@ const BlogDetail = () => {
 
   return (
     <div style={{ fontFamily: "Montserrat, sans-serif" }}>
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-4 px-4 text-sm text-gray-600 pl-33">
-        Home / Blog /{" "}
-        <span className="text-gray-800 font-medium text-[14px]">
-          {blog.title}
-        </span>
-      </div>
 
       {/* Main Layout */}
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -269,13 +268,15 @@ const BlogDetail = () => {
           {/* Search */}
           <div>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black text-xl">
+              <span onClick={handleSearch}  className="absolute left-3 top-1/2 -translate-y-1/2 text-black text-xl">
                 <FiSearch />
               </span>
               <input
                 type="text"
                 placeholder="Search"
                 className="w-full border p-2 pl-10 rounded"
+                value={searchQuery} // Gắn giá trị tìm kiếm vào input
+                onChange={(e) => setSearchQuery(e.target.value)} // Cập nhật khi người dùng nhập
               />
             </div>
           </div>
