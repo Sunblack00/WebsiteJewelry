@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "ring",
+    "count": 7,
+    "image": "../images/collection/ring.png"
+  },
+  {
+    "id": 2,
+    "name": "necklace",
+    "count": 7,
+    "image": "../images/collection/necklace.png"
+  },
+  {
+    "id": 3,
+    "name": "watch",
+    "count": 2,
+    "image": "../images/collection/watch.png"
+  },
+  {
+    "id": 4,
+    "name": "bracelet",
+    "count": 6,
+    "image": "../images/collection/bracelet.png"
+  },
+  {
+    "id": 5,
+    "name": "brooch",
+    "count": 3,
+    "image": "../images/collection/brooch.png"
+  },
+  {
+    "id": 6,
+    "name": "earring",
+    "count": 3,
+    "image": "../images/collection/earring.png"
+  }
+]
