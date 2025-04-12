@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ListCollection({ collections }) {
-  
   return (
     <>
       <div
@@ -14,7 +13,7 @@ export default function ListCollection({ collections }) {
             return (
               <>
                 <Link
-                  to={`/product/collection/${item.name}`}
+                  to={`/collection/${item.name}`}
                   key={item.id}
                   className="flex justify-center items-center group border rounded-2xl border-gray-400/50 hover:border-gray-400 m-5"
                 >
@@ -38,7 +37,7 @@ export default function ListCollection({ collections }) {
               <>
                 <Link
                   key={item.id}
-                  to={`/product/collection/${item.name}`}
+                  to={`/collection/${item.name}`}
                   className="flex justify-center items-center group border rounded-2xl border-gray-400/50 hover:border-gray-400 m-5"
                 >
                   <div className="me-18">

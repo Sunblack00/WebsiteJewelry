@@ -12,8 +12,8 @@ export default function Header() {
   const [activePath, setActivePath] = useState(null);
   const navItems = [
     { path: "/", label: "HOME" },
-    { path: "/product/collection/all", label: "PRODUCT" },
-    { path: "/collection", label: "COLLECTIONS" },
+    { path: "/collection/all", label: "PRODUCT" },
+    { path: "/collection", label: "COLLECTION" },
     { path: "/blog", label: "BLOG" },
     { path: "/contact", label: "CONTACT US" },
     { path: "/about", label: "ABOUT US" },
