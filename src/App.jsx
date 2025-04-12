@@ -21,7 +21,7 @@ import AuthProvider from "./context/AuthContext";
 import Breadcrumb from "./components/Breadcrumb";
 export default function App() {
   return (
-
+    <AuthProvider>
       <CartProvider>
         <Header />
         <Breadcrumb />
