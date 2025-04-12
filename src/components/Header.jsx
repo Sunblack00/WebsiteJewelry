@@ -5,8 +5,10 @@ import { GoPerson } from "react-icons/go";
 import { BiSearchAlt } from "react-icons/bi";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CartContext } from "../store/CartContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Header() {
+  const { user } = useAuth();
   const [activePath, setActivePath] = useState(null);
   const navItems = [
     { path: "/", label: "HOME" },
@@ -25,7 +27,7 @@ export default function Header() {
           <img src={logo} alt="logo" />
         </Link>
 
-        <ul className="flex space-x-16 text-sm font-medium">
+        <ul className="flex space-x-10 text-sm font-medium">
           {navItems.map((item) => (
             <li className="relative group" key={item.label}>
               <span
@@ -49,10 +51,17 @@ export default function Header() {
 
         <div className="flex items-center space-x-8">
           <Link to={"/account"}>
-            <GoPerson
-              size={"25px"}
-              className=" hover:opacity-25 transition-all duration-500"
-            />
+            <div className="flex items-center gap-2 hover:opacity-25 transition-all duration-500">
+              {user && (
+                <p className="text-xs ">
+                  Welcome <p>{user.name}</p>
+                </p>
+              )}
+              <GoPerson
+                size={"25px"}
+                className=" hover:opacity-25 transition-all duration-500"
+              />
+            </div>
           </Link>
           <BiSearchAlt
             size={"25px"}

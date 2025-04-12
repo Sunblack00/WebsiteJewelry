@@ -14,10 +14,10 @@ function Blog() {
   }, []);
 
   return (
-    <div className="bg-white text-black" style={{ fontFamily: "Montserrat, sans-serif" }}>
-      <div className="bg-gray-100 py-4 px-4 text-sm text-gray-600 pl-33 mb-10">
-        Home / <span className="text-black font-medium">Blog</span> /
-      </div>
+    <div
+      className="bg-white text-black"
+      style={{ fontFamily: "Montserrat, sans-serif" }}
+    >
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogs.map((blog) => (
@@ -30,9 +30,7 @@ function Blog() {
               <div className="text-sm text-gray-500 mb-2">
                 {blog.date} | {blog.comments.length} COMMENTS
               </div>
-              <h3 className="text-2xl font-bold mb-2 truncate">
-                {blog.title}
-              </h3>
+              <h3 className="text-2xl font-bold mb-2 truncate">{blog.title}</h3>
               <Link
                 to={`/blog/${blog.id}`} // dùng Link thay vì thẻ <a>
                 className="text-sm font-semibold text-[#f2dee3] hover:underline hover:text-black px-3 py-1 inline-block rounded"

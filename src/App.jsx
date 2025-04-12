@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Blog from "./pages/Blog";
-import Account from "./components/Account";
 import ProductDetail from "./pages/ProductDetail";
 import Footer from "./components/Footer";
 import BlogDetail from "./pages/BlogDetail";
@@ -15,27 +14,37 @@ import CartProvider from "./store/CartContext";
 import Cart from "./pages/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-
+import Profile from "./pages/Profile";
+import Account from "./pages/Account";
+import AuthProvider from "./context/AuthContext";
+import Breadcrumb from "./components/Breadcrumb";
 export default function App() {
   return (
     <>
-      <CartProvider>
-        <Header />
-        <ScrollToTopButton />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/collection/:collection" element={<Product />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
-        </Routes>
-        <Footer />
-      </CartProvider>
+      <AuthProvider>
+        <CartProvider>
+          <Header />
+          <Breadcrumb />
+          <ScrollToTopButton />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/product/collection/:collection"
+              element={<Product />}
+            />
+            <Route path="/account" element={<Account />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+          </Routes>
+          <Footer />
+        </CartProvider>
+      </AuthProvider>
     </>
   );
 }
