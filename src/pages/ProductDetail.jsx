@@ -5,17 +5,20 @@ import { FaFire } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import InputQuantity from "../components/ProductDetails/InputQuantity";
 import { currencyFormatter } from "../util/formatting";
-import { useContext, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import FigureProduct from "../components/ProductDetails/FigureProduct";
 import ModalSizeGuide from "../components/ProductDetails/ModalSizeGuide";
 import MoreProductInfo from "../components/ProductDetails/MoreProductInfo";
 import ProductOption from "../components/ProductDetails/ProductOption";
 import { CartContext } from "../store/CartContext";
 import { image } from "motion/react-m";
+import toast from "react-hot-toast";
 export default function ProductDetail() {
     const { id } = useParams();
-    const { addItemToCart } = useContext(CartContext);
+    const { addToCart, cartItems } = useContext(CartContext);
     const item = JEWELRY.find((item) => item.id === parseInt(id));
+
+    // Cac state de quan ly cac component
     const [isModal, setIsModal] = useState(false);
     const [isOpen, setIsOpen] = useState({
         des: false,
@@ -26,28 +29,46 @@ export default function ProductDetail() {
         size: item.options.sizes[0],
         metal: item.options.metals[0],
     });
-    const options = item.options;
-    const variants = item.variants;
-    const [quantity, setQuantity] = useState(variants[0].quantity);
-    const [price, setPrice] = useState(variants[0].price);
     const [quantityInput, setQuantityInput] = useState(1);
 
+    // Tim ra duoc so luong cua san pham o trong gio hang
+    const inCart = useMemo(() => {
+        return (
+            cartItems.find(
+                (cartItem) =>
+                    cartItem.id === item.id &&
+                    JSON.stringify(cartItem.selectedOption) ===
+                        JSON.stringify(selectedOption)
+            )?.quantity || 0
+        );
+    }, [cartItems, item.id, selectedOption]);
+
+    // Su dung useMemo de cap nhat lai gia cua price va quantity
+    const price = useMemo(() => {
+        const variant = item.variants.find(
+            (v) => v.stone === selectedOption.stone
+        );
+        return variant.price;
+    }, [selectedOption.stone, item.variants]);
+
+    const quantity = useMemo(() => {
+        const variant = item.variants.find(
+            (v) =>
+                v.stone === selectedOption.stone &&
+                v.size === selectedOption.size &&
+                v.metal === selectedOption.metal
+        );
+        return variant?.quantity || 0;
+    }, [selectedOption, item.variants]);
+
     // Phuong thuc chon stone
+    
     function handleOption(type, value) {
         const updated = {
             ...selectedOption,
             [type]: value,
         };
-        const variant = variants.find(
-            (v) =>
-                v.stone === updated.stone &&
-                v.size === updated.size &&
-                v.metal === updated.metal
-        );
-        const va = variants.find((v) => v.stone === updated.stone);
         setSelectedOption(updated);
-        setPrice(va.price);
-        setQuantity(variant?.quantity || 0);
     }
 
     // Phuong thuc mo modal size
@@ -64,15 +85,19 @@ export default function ProductDetail() {
     }
 
     // Phuong thuc them san pham vao gio hang
-    function handleAddItem(item) {
-        addItemToCart({
+    function handleAddItem() {
+        addToCart({
             id: item.id,
+            image: item.images[0],
             name: item.name,
             selectedOption: selectedOption,
             quantity: quantityInput,
+            maxQuantity: quantity,
             price,
-            total: price * quantity,
+            total: price * quantityInput,
         });
+        setQuantityInput(1);
+        toast.success("Đã thêm vào giỏ hàng!");
     }
 
     return (
@@ -98,7 +123,7 @@ export default function ProductDetail() {
                         selectedOption={selectedOption}
                         option={"stones"}
                         value={"stone"}
-                        options={options}
+                        options={item.options}
                         onOption={handleOption}
                         onModal={handleModal}
                     />
@@ -106,7 +131,7 @@ export default function ProductDetail() {
                         selectedOption={selectedOption}
                         option={"sizes"}
                         value={"size"}
-                        options={options}
+                        options={item.options}
                         onOption={handleOption}
                         onModal={handleModal}
                     />
@@ -115,7 +140,7 @@ export default function ProductDetail() {
                         selectedOption={selectedOption}
                         option={"metals"}
                         value={"metal"}
-                        options={options}
+                        options={item.options}
                         onOption={handleOption}
                         onModal={handleModal}
                     />
@@ -129,17 +154,12 @@ export default function ProductDetail() {
                     <p className="mt-5 text-lg font-sans">
                         {item.shortDescription}
                     </p>
-                    <div className="flex items-center gap-5">
-                        <InputQuantity
-                            value={quantityInput}
-                            onChange={setQuantityInput}
-                        />
-                        {quantity > 0 && (
-                            <span className="text-lg mt-4">
-                                Quantity: {quantity}
-                            </span>
-                        )}
-                    </div>
+                    <InputQuantity
+                        value={quantityInput}
+                        onChange={setQuantityInput}
+                        currentQuantity={inCart}
+                        maxQuantity={quantity}
+                    />
                     <button
                         disabled={quantity === 0}
                         className={`border bg-black text-white mt-5 w-full py-2 font-bold flex items-center justify-center gap-3 ${

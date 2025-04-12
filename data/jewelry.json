@@ -4,8 +4,8 @@
     "name": "Out of Retirement Block Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-1_a.png",
-      "../images/product/ring-1_b.png"
+      "../../images/product/ring-1_a.png",
+      "../../images/product/ring-1_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -63,8 +63,8 @@
     "name": "Eternal Grace Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-2_a.png",
-      "../images/product/ring-2_b.png"
+      "../../images/product/ring-2_a.png",
+      "../../images/product/ring-2_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -115,8 +115,8 @@
     "name": "Radiance Diamond Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-3_a.png",
-      "../images/product/ring-3_b.png"
+      "../../images/product/ring-3_a.png",
+      "../../images/product/ring-3_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -167,8 +167,8 @@
     "name": "Celestial Harmony Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-4_a.png",
-      "../images/product/ring-4_b.png"
+      "../../images/product/ring-4_a.png",
+      "../../images/product/ring-4_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -219,8 +219,8 @@
     "name": "Golden Twilight Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-5_a.png",
-      "../images/product/ring-5_b.png"
+      "../../images/product/ring-5_a.png",
+      "../../images/product/ring-5_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -270,8 +270,8 @@
     "name": "Luminous Radiance Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-6_a.png",
-      "../images/product/ring-6_b.png"
+      "../../images/product/ring-6_a.png",
+      "../../images/product/ring-6_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -321,8 +321,8 @@
     "name": "Mystic Light Ring",
     "type": "Ring",
     "images": [
-      "../images/product/ring-7_a.png",
-      "../images/product/ring-7_b.png"
+      "../../images/product/ring-7_a.png",
+      "../../images/product/ring-7_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -372,8 +372,8 @@
     "name": "Necklace of Serenity",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-8_a.png",
-      "../images/product/necklace-8_b.png"
+      "../../images/product/necklace-8_a.png",
+      "../../images/product/necklace-8_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -424,8 +424,8 @@
     "name": "Emerald Elegance Necklace",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-9_a.png",
-      "../images/product/necklace-9_b.png"
+      "../../images/product/necklace-9_a.png",
+      "../../images/product/necklace-9_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -476,8 +476,8 @@
     "name": "Ruby Radiance Necklace",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-10_a.png",
-      "../images/product/necklace-10_b.png"
+      "../../images/product/necklace-10_a.png",
+      "../../images/product/necklace-10_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -528,8 +528,8 @@
     "name": "Twilight Glow Necklace",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-11_a.png",
-      "../images/product/necklace-11_b.png"
+      "../../images/product/necklace-11_a.png",
+      "../../images/product/necklace-11_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -580,8 +580,8 @@
     "name": "Celestial Dream Necklace",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-12_a.png",
-      "../images/product/necklace-12_b.png"
+      "../../images/product/necklace-12_a.png",
+      "../../images/product/necklace-12_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -632,8 +632,8 @@
     "name": "Goddess Whisper Necklace",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-13_a.png",
-      "../images/product/necklace-13_b.png"
+      "../../images/product/necklace-13_a.png",
+      "../../images/product/necklace-13_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -684,8 +684,8 @@
     "name": "Ocean Heart Necklace",
     "type": "Necklace",
     "images": [
-      "../images/product/necklace-14_a.png",
-      "../images/product/necklace-14_b.png"
+      "../../images/product/necklace-14_a.png",
+      "../../images/product/necklace-14_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -736,8 +736,8 @@
     "name": "Graceful Touch Bracelet",
     "type": "Bracelet",
     "images": [
-      "../images/product/bracelet-15_a.png",
-      "../images/product/bracelet-15_b.png"
+      "../../images/product/bracelet-15_a.png",
+      "../../images/product/bracelet-15_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -788,8 +788,8 @@
     "name": "Starlight Beam Bracelet",
     "type": "Bracelet",
     "images": [
-      "../images/product/bracelet-16_a.png",
-      "../images/product/bracelet-16_b.png"
+      "../../images/product/bracelet-16_a.png",
+      "../../images/product/bracelet-16_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -840,8 +840,8 @@
     "name": "Whispering Leaves Bracelet",
     "type": "Bracelet",
     "images": [
-      "../images/product/bracelet-17_a.png",
-      "../images/product/bracelet-17_b.png"
+      "../../images/product/bracelet-17_a.png",
+      "../../images/product/bracelet-17_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -892,8 +892,8 @@
     "name": "Sunrise Mist Bracelet",
     "type": "Bracelet",
     "images": [
-      "../images/product/bracelet-18_a.png",
-      "../images/product/bracelet-18_b.png"
+      "../../images/product/bracelet-18_a.png",
+      "../../images/product/bracelet-18_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -944,8 +944,8 @@
     "name": "Royal Charm Bracelet",
     "type": "Bracelet",
     "images": [
-      "../images/product/bracelet-19_a.png",
-      "../images/product/bracelet-19_b.png"
+      "../../images/product/bracelet-19_a.png",
+      "../../images/product/bracelet-19_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -996,8 +996,8 @@
     "name": "Velvet Sky Bracelet",
     "type": "Bracelet",
     "images": [
-      "../images/product/bracelet-20_a.png",
-      "../images/product/bracelet-20_b.png"
+      "../../images/product/bracelet-20_a.png",
+      "../../images/product/bracelet-20_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
@@ -1048,8 +1048,8 @@
     "name": "Midnight Bloom Brooch",
     "type": "Brooch",
     "images": [
-      "../images/product/brooch-21_a.png",
-      "../images/product/brooch-21_b.png"
+      "../../images/product/brooch-21_a.png",
+      "../../images/product/brooch-21_b.png"
     ],
     "options": {
       "stones": ["Sapphire", "Amethyst", "Topaz"],
@@ -1100,8 +1100,8 @@
     "name": "Celestial Whisper Brooch",
     "type": "Brooch",
     "images": [
-      "../images/product/brooch-22_a.png",
-      "../images/product/brooch-22_b.png"
+      "../../images/product/brooch-22_a.png",
+      "../../images/product/brooch-22_b.png"
     ],
     "options": {
       "stones": ["Moonstone", "Opal", "Garnet"],
@@ -1152,8 +1152,8 @@
     "name": "Royal Crest Brooch",
     "type": "Brooch",
     "images": [
-      "../images/product/brooch-23_a.png",
-      "../images/product/brooch-23_b.png"
+      "../../images/product/brooch-23_a.png",
+      "../../images/product/brooch-23_b.png"
     ],
     "options": {
       "stones": ["Ruby", "Sapphire", "Black Diamond"],
@@ -1204,8 +1204,8 @@
     "name": "Eclipse Noir Watch",
     "type": "Watch",
     "images": [
-      "../images/product/watch-24_a.png",
-      "../images/product/watch-24_b.png"
+      "../../images/product/watch-24_a.png",
+      "../../images/product/watch-24_b.png"
     ],
     "options": {
       "stones": ["Black Diamond", "Sapphire", "Onyx"],
@@ -1256,8 +1256,8 @@
     "name": "Aurora Luxe Watch",
     "type": "Watch",
     "images": [
-      "../images/product/watch-25_a.png",
-      "../images/product/watch-25_b.png"
+      "../../images/product/watch-25_a.png",
+      "../../images/product/watch-25_b.png"
     ],
     "options": {
       "stones": ["Opal", "Emerald", "Diamond"],
@@ -1308,8 +1308,8 @@
     "name": "Frost Lily Earring",
     "type": "Earring",
     "images": [
-      "../images/product/earring-26_a.png",
-      "../images/product/earring-26_b.png"
+      "../../images/product/earring-26_a.png",
+      "../../images/product/earring-26_b.png"
     ],
     "options": {
       "stones": ["Diamond", "Aquamarine", "Blue Topaz"],
@@ -1360,8 +1360,8 @@
     "name": "Crimson Echo Earring",
     "type": "Earring",
     "images": [
-      "../images/product/earring-27_a.png",
-      "../images/product/earring-27_b.png"
+      "../../images/product/earring-27_a.png",
+      "../../images/product/earring-27_b.png"
     ],
     "options": {
       "stones": ["Ruby", "Garnet", "Spinel"],
@@ -1412,8 +1412,8 @@
     "name": "Golden Fern Earring",
     "type": "Earring",
     "images": [
-      "../images/product/earring-28_a.png",
-      "../images/product/earring-28_b.png"
+      "../../images/product/earring-28_a.png",
+      "../../images/product/earring-28_b.png"
     ],
     "options": {
       "stones": ["Citrine", "Amber", "Topaz"],

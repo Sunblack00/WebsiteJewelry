@@ -118,15 +118,15 @@ const Footer = () => {
   <div className="px-6 py-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
     <div className="mb-4 md:mb-0">© 2025 - Powered by Shopify</div>
     <div className="flex gap-2 flex-wrap justify-center">
-      <img src="../images/footer/amazon.png" alt="Amazon Pay" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/amex.png" alt="American Express" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/ipay.png" alt="Apple Pay" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/discover.png" alt="Discover" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/ggpay.png" alt="Google Pay" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/doxanh.png" alt="Maestro" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/docam.png" alt="Mastercard" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/paypay.png" alt="Paypal" className="h-6 w-auto rounded-sm border border-gray-400" />
-      <img src="../images/footer/viisa.png" alt="Visa" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/amazon.png" alt="Amazon Pay" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/amex.png" alt="American Express" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/ipay.png" alt="Apple Pay" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/discover.png" alt="Discover" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/ggpay.png" alt="Google Pay" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/doxanh.png" alt="Maestro" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/docam.png" alt="Mastercard" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/paypay.png" alt="Paypal" className="h-6 w-auto rounded-sm border border-gray-400" />
+      <img src="../../images/footer/viisa.png" alt="Visa" className="h-6 w-auto rounded-sm border border-gray-400" />
     </div>
   </div>
 </div>

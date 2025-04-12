@@ -1,5 +1,4 @@
 import { Eye, ShoppingCart } from "lucide-react";
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ListProduct({ products }) {
@@ -10,7 +9,10 @@ export default function ListProduct({ products }) {
         style={{ width: "70%" }}
       >
         {products.map((item) => (
-          <Link key={item.id} to={`/product/${item.id}`}>
+          <Link
+            key={item.id}
+            to={`/collection/${item.type.toLowerCase()}/${item.id}`}
+          >
             <div
               className=" cursor-pointer group relative overflow-hidden "
               style={{ boxShadow: "0px 0px 15px #0000001a" }}

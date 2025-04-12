@@ -13,7 +13,7 @@ export default function ListCollection({ collections }) {
             return (
               <>
                 <Link
-                  to={`/product/collection/${item.name}`}
+                  to={`/collection/${item.name}`}
                   key={item.id}
                   className="flex justify-center items-center group border rounded-2xl border-gray-400/50 hover:border-gray-400 m-5"
                 >
@@ -27,7 +27,7 @@ export default function ListCollection({ collections }) {
                     <p className="text-3xl font-semibold capitalize">
                       {item.name}
                     </p>
-                    <p className="font-light">{item.count} Products</p>
+                    <p className="font-light">{item.count} Product</p>
                   </div>
                 </Link>
               </>
@@ -37,14 +37,14 @@ export default function ListCollection({ collections }) {
               <>
                 <Link
                   key={item.id}
-                  to={`/product/collection/${item.name}`}
+                  to={`/collection/${item.name}`}
                   className="flex justify-center items-center group border rounded-2xl border-gray-400/50 hover:border-gray-400 m-5"
                 >
                   <div className="me-18">
                     <p className="text-3xl font-semibold capitalize">
                       {item.name}
                     </p>
-                    <p className="font-light">{item.count} Products</p>
+                    <p className="font-light">{item.count} Product</p>
                   </div>
                   <img
                     src={item.image}

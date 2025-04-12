@@ -9,7 +9,7 @@ export default function CollectionSection() {
         style={{ width: "70%" }}
       >
         <Link
-          to="/product/collection/ring"
+          to="/collection/ring"
           className="border border-gray-300 relative cursor-pointer group"
         >
           <img
@@ -25,7 +25,7 @@ export default function CollectionSection() {
           </p>
         </Link>
         <Link
-          to="/product/collection/necklace"
+          to="/collection/necklace"
           className="border border-gray-300 relative cursor-pointer group"
         >
           <img
@@ -41,7 +41,7 @@ export default function CollectionSection() {
           </p>
         </Link>
         <Link
-          to="/product/collection/bracelet"
+          to="/collection/bracelet"
           className="border border-gray-300 relative cursor-pointer group"
         >
           <img

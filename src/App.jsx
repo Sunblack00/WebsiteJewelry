@@ -20,28 +20,37 @@ import Account from "./pages/Account";
 import AuthProvider from "./context/AuthContext";
 import Breadcrumb from "./components/Breadcrumb";
 export default function App() {
-  return (
-    <AuthProvider>
-      <CartProvider>
-        <Header />
-        <Breadcrumb />
-        <ScrollToTopButton />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/collection/:collection" element={<Product />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
-          <Route path="/collection" element={<Collection />} />
-        </Routes>
-        <Footer />
-      </CartProvider>
-    </AuthProvider>
-  );
+    return (
+        <AuthProvider>
+            <CartProvider>
+                <Header />
+                <Breadcrumb />
+                <ScrollToTopButton />
+                <ScrollToTop />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route
+                        path="/collection/:collection"
+                        element={<Product />}
+                    />
+                    <Route path="/collection" element={<Collection />} />
+                    <Route path="/account" element={<Account />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route
+                        path="/collection/:collection/:id"
+                        element={<ProductDetail />}
+                    />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/blog/:id" element={<BlogDetail />} />
+                </Routes>
+                <Footer />
+            </CartProvider>
+        </AuthProvider>
+    );
 }
+
+
+
