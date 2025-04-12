@@ -35,7 +35,7 @@ const Breadcrumb = () => {
                   ) : (
                     <Link
                       to={routeTo}
-                      className="text-blue-600 hover:underline capitalize"
+                      className="text-gray-500 hover:text-gray-900 capitalize"
                     >
                       {decodeURIComponent(name)}
                     </Link>
