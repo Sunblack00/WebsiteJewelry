@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Banner2() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="relative">
@@ -20,7 +23,10 @@ export default function Banner2() {
             YOUR PERSONALITY
           </p>
 
-          <button className="px-10 py-3 mt-6 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent duration-300 border border-white cursor-pointer hover:text-white">
+          <button
+            className="px-10 py-3 mt-6 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent duration-300 border border-white cursor-pointer hover:text-white"
+            onClick={() => navigate("/collection/all")}
+          >
             Shop now
           </button>
         </div>

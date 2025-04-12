@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CollectionSection() {
   return (
@@ -7,7 +8,10 @@ export default function CollectionSection() {
         className="grid grid-cols-3 gap-8 m-auto my-20"
         style={{ width: "70%" }}
       >
-        <div className="border border-gray-300 relative cursor-pointer group">
+        <Link
+          to="/collection/ring"
+          className="border border-gray-300 relative cursor-pointer group"
+        >
           <img
             src="../images/home/ring.png"
             alt=""
@@ -19,8 +23,11 @@ export default function CollectionSection() {
           >
             Ring
           </p>
-        </div>
-        <div className="border border-gray-300 relative cursor-pointer group">
+        </Link>
+        <Link
+          to="/collection/necklace"
+          className="border border-gray-300 relative cursor-pointer group"
+        >
           <img
             src="../images/home/necklace.png"
             alt=""
@@ -32,8 +39,11 @@ export default function CollectionSection() {
           >
             Necklace
           </p>
-        </div>
-        <div className="border border-gray-300 relative cursor-pointer group">
+        </Link>
+        <Link
+          to="/collection/bracelet"
+          className="border border-gray-300 relative cursor-pointer group"
+        >
           <img
             src="../images/home/bracelet.png"
             alt=""
@@ -45,7 +55,7 @@ export default function CollectionSection() {
           >
             Bracelet
           </p>
-        </div>
+        </Link>
       </div>
     </>
   );
