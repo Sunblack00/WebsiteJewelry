@@ -26,7 +26,7 @@ export default function Banner() {
         </p>
         <button
           className="px-10 py-3 mt-10 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent duration-300 border border-white cursor-pointer hover:text-white"
-          onClick={() => navigate("/product/collection/all")}
+          onClick={() => navigate("/collection/all")}
         >
           Shop now
         </button>
