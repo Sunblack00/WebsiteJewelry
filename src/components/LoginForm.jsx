@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RxEyeClosed, RxEyeOpen } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { useAuth } from "../context/AuthContext";
@@ -7,11 +7,14 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const { handleLogin, fetchProfile, handleChange, formLogin } = useAuth();
   const [forgotpwd, setForgotPwd] = useState(false);
-
+  const [showPassword, setShowPassword] = useState(false);
+  const [focus, setFocus] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const loginToken = await handleLogin();
     if (loginToken) {
+      localStorage.setItem("token", loginToken);
       await fetchProfile(loginToken);
       navigate("/profile");
     }
@@ -46,16 +49,33 @@ const LoginForm = () => {
           >
             Password
           </label>
-          <input
-            type="password"
-            name="loginPassword"
-            id="loginPassword"
-            className="w-md border border-gray-300 rounded-md px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500 mb-5"
-            placeholder="••••••••"
-            required
-            value={formLogin.loginPassword}
-            onChange={handleChange}
-          />
+          <div
+            className={`flex items-center border border-gray-300 h-12 w-md rounded-md mb-5 ${
+              focus ? " ring-gray-500 ring-2" : "border-gray-300"
+            }`}
+            onFocus={() => setFocus(true)}
+            onBlur={() => setFocus(false)}
+          >
+            <input
+              type={showPassword ? "text" : "password"}
+              name="loginPassword"
+              id="loginPassword"
+              className="w-sm indent-2 border-none focus:outline-none"
+              placeholder="••••••••"
+              required
+              value={formLogin.loginPassword}
+              onChange={handleChange}
+            />
+            {showPassword ? (
+              <RxEyeOpen size={"25px"} onClick={() => setShowPassword(false)} />
+            ) : (
+              <RxEyeClosed
+                size={"25px"}
+                className=""
+                onClick={() => setShowPassword(true)}
+              />
+            )}
+          </div>
         </div>
         <button
           type="submit"
@@ -103,6 +123,7 @@ const LoginForm = () => {
                 value={formLogin.resetEmail}
                 onChange={handleChange}
               />
+
               <button
                 type="submit"
                 className=" bg-black text-white px-10 py-3 mb-5  focus:ring-gray-500 transition duration-300 font-medium hover:bg-gray-400 hover:text-gray-600"

@@ -22,7 +22,7 @@ export default function Header() {
   const quantity = cartItems.length;
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="md:container mx-auto flex items-center justify-between py-4 pl-20">
+      <div className="w-7xl mx-auto flex items-center justify-between py-4 pl-20">
         <Link to={"/"}>
           <img src={logo} alt="logo" />
         </Link>
@@ -54,7 +54,7 @@ export default function Header() {
             <div className="flex items-center gap-2 hover:opacity-25 transition-all duration-500">
               {user && (
                 <p className="text-xs ">
-                  Welcome <p>{user.name}</p>
+                  Welcome <br /> {user.name}
                 </p>
               )}
               <GoPerson

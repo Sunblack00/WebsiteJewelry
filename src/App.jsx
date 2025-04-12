@@ -38,6 +38,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/collection" element={<Collection />} />
         </Routes>
         <Footer />
       </CartProvider>

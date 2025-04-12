@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 export const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
@@ -18,6 +18,13 @@ const AuthProvider = ({ children }) => {
     loginPassword: "",
     resetEmail: "",
   });
+  useEffect(() => {
+    const savedToken = localStorage.getItem("token");
+    if (savedToken) {
+      setToken(savedToken);
+      fetchProfile(savedToken);
+    }
+  }, []);
   const handleChange = (e) => {
     setFormRegister({
       ...formRegister,
@@ -66,6 +73,13 @@ const AuthProvider = ({ children }) => {
       });
 
       alert(res.data.message);
+      setFormRegister({
+        fname: "",
+        lname: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
     } catch (err) {
       alert("Register Fail");
     }
@@ -74,6 +88,7 @@ const AuthProvider = ({ children }) => {
   const logout = () => {
     setToken(null);
     setUser(null);
+    localStorage.removeItem("token");
   };
 
   const fetchProfile = async (loginToken) => {

@@ -40,4 +40,15 @@ router.post("/login", async (req, res) => {
   res.json({ message: "Dang nhap thanh cong", token, user });
 });
 
+router.post("/resetpassword", async (req, res) => {
+  const { email } = req.body;
+  const user = await User.findOne({ email });
+
+  if (!user) return res.status(401).json({ message: "Email khong ton tai" });
+
+  const decodedPwd = await bcrypt.compare(password, user.password);
+  console.log(decodedPwd);
+  res.json(user);
+});
+
 module.exports = router;
