@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ListCollection({ collections }) {
+  
   return (
     <>
       <div
@@ -27,7 +28,7 @@ export default function ListCollection({ collections }) {
                     <p className="text-3xl font-semibold capitalize">
                       {item.name}
                     </p>
-                    <p className="font-light">{item.count} Products</p>
+                    <p className="font-light">{item.count} Product</p>
                   </div>
                 </Link>
               </>
@@ -44,7 +45,7 @@ export default function ListCollection({ collections }) {
                     <p className="text-3xl font-semibold capitalize">
                       {item.name}
                     </p>
-                    <p className="font-light">{item.count} Products</p>
+                    <p className="font-light">{item.count} Product</p>
                   </div>
                   <img
                     src={item.image}
