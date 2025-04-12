@@ -15,26 +15,33 @@ export default function CartPage() {
         removeFromCart,
         updateQuantity,
     } = useContext(CartContext);
-    const [errorQuantity, setErrorQuantity] = useState("");
+    const [errorQuantities, setErrorQuantities] = useState("");
     function handleUpdateQuantity(item, selectedOption, newQuantity) {
-        console.log(newQuantity);
         const max = item.maxQuantity;
+        const key = `${item.id}-${JSON.stringify(selectedOption)}`;
         if (newQuantity >= 1 && newQuantity <= max) {
             updateQuantity(item.id, selectedOption, newQuantity);
-            setErrorQuantity("");
+            setErrorQuantities((prev) => ({ ...prev, [key]: "" }));
         } else {
-            setErrorQuantity(
-                "You have selected the maximum quantity available."
-            );
+            setErrorQuantities((prev) => ({
+                ...prev,
+                [key]: "You have selected the maximum quantity available.",
+            }));
+            setTimeout(() => {
+                setErrorQuantities((prev) => ({ ...prev, [key]: "" }));
+            }, 1500);
         }
     }
 
     if (cartItems.length === 0) {
         return (
-            <div className="p-10 text-center text-xl">
-                🛒 Giỏ hàng của bạn đang trống.{" "}
-                <Link to="/product" className="text-blue-600 underline">
-                    Tiếp tục mua sắm
+            <div className="p-72 text-center text-4xl">
+                🛒 Your cart is empty.{" "}
+                <Link
+                    to="/collection/all"
+                    className="font-bold underline block mt-10"
+                >
+                    CONTINUE SHOPPING
                 </Link>
             </div>
         );
@@ -46,7 +53,7 @@ export default function CartPage() {
                 Your Shopping Cart
             </h1>
             <div className="mt-6">
-                <Link to="/product">
+                <Link to="/collection/all">
                     <span className="flex gap-1 items-center text-lg font-medium">
                         <IoMdArrowRoundBack /> CONTINUE SHOPPING
                     </span>
@@ -99,9 +106,19 @@ export default function CartPage() {
                                         }
                                     />
                                 </div>
-                                {errorQuantity && (
-                                    <p className="text-sm text-red-600 mt-1 transition-all duration-200">
-                                        {errorQuantity}
+                                {errorQuantities[
+                                    `${item.id}-${JSON.stringify(
+                                        item.selectedOption
+                                    )}`
+                                ] && (
+                                    <p className="text-sm text-red-600 mt-1 transition-all ease-in-out duration-200">
+                                        {
+                                            errorQuantities[
+                                                `${item.id}-${JSON.stringify(
+                                                    item.selectedOption
+                                                )}`
+                                            ]
+                                        }
                                     </p>
                                 )}
                             </div>
@@ -171,8 +188,11 @@ export default function CartPage() {
                             {currencyFormatter.format(totalPrice)}
                         </span>
                     </div>
-                    <button className="w-full bg-black text-white mt-4 py-2 font-semibold hover:bg-gray-800 ">
-                        GO TO CHECKOUT
+                    <button
+                        className="w-full bg-black text-white mt-4 py-2 font-semibold hover:bg-gray-800"
+                        onClick={() => alert("Order successful")}
+                    >
+                        CHECKOUT
                     </button>
                     <p className="text-xs text-gray-400 mt-4">
                         Newlife processes all orders in USD. Shipping & taxes

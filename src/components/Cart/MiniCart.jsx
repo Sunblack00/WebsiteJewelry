@@ -1,7 +1,7 @@
 import { useContext, useCallback, useState, memo } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../store/CartContext";
-import { currencyFormatter } from "../util/formatting";
+import { CartContext } from "../../store/CartContext";
+import { currencyFormatter } from "../../util/formatting";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import MiniCartItem from "./MiniCartItem";
@@ -26,13 +26,13 @@ export default function MiniCart() {
         return (
             <div className="w-100 bg-white shadow-md rounded-lg p-4 absolute top-12 right-0 z-50">
                 <p className="text-center text-gray-500">
-                    Giỏ hàng của bạn đang trống.
+                    Your cart is empty
                 </p>
                 <Link
-                    to="/product"
+                    to="/collection/all"
                     className="block text-center text-[#EFE0E5] mt-4 hover:underline"
                 >
-                    Tiếp tục mua sắm
+                    Continue shopping
                 </Link>
             </div>
         );

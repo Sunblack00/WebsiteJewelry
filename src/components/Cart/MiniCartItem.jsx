@@ -1,5 +1,5 @@
 import { FaTrashAlt } from "react-icons/fa";
-import { currencyFormatter } from "../util/formatting";
+import { currencyFormatter } from "../../util/formatting";
 export default function MiniCartItem({ item, onRemove }) {
     return (
         <div className="flex items-center gap-4 py-4 border-b border-gray-200">
