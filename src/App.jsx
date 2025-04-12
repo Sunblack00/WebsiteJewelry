@@ -13,26 +13,29 @@ import BlogDetail from "./pages/BlogDetail";
 
 import CartProvider from "./store/CartContext";
 import Cart from "./pages/Cart";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function App() {
   return (
     <>
       <CartProvider>
         <Header />
+        <ScrollToTopButton />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product/collection/:collection" element={<Product />} />
           <Route path="/account" element={<Account />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </CartProvider>
     </>
   );
 }
-

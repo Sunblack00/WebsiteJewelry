@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <div className="grid grid-cols-2">
       <div className="relative h-[450px]">
@@ -35,7 +38,10 @@ export default function Hero() {
           >
             Product
           </p>
-          <button className="px-10 py-3 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent hover:text-white duration-300 border border-white cursor-pointer">
+          <button
+            className="px-10 py-3 text-2xs bg-white uppercase tracking-widest font-semibold hover:bg-transparent hover:text-white duration-300 border border-white cursor-pointer"
+            onClick={() => navigate("/product/collection/all")}
+          >
             Shop now
           </button>
         </div>
