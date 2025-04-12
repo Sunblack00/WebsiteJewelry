@@ -10,12 +10,14 @@ import Account from "./components/Account";
 import ProductDetail from "./pages/ProductDetail";
 import CartProvider from "./store/CartContext";
 import Cart from "./pages/Cart";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
     return (
         <>
             <CartProvider>
                 <Header />
+                <Toaster richColors position="top-right" />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />

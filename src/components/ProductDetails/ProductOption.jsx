@@ -1,5 +1,6 @@
+import React from "react";
 import { FaPencilRuler } from "react-icons/fa";
-export default function ProductOption({
+const ProductOption = React.memo(function ProductOption({
     selectedOption,
     value,
     options,
@@ -7,6 +8,7 @@ export default function ProductOption({
     option,
     onModal,
 }) {
+    console.log("alo");
     return (
         <div>
             <div className="flex justify-between items-center">
@@ -43,4 +45,5 @@ export default function ProductOption({
             </div>
         </div>
     );
-}
+});
+export default ProductOption;
