@@ -15,11 +15,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Collection from "./pages/Collection";
 import SearchResults from "./pages/SearchResults";
-
 import Profile from "./pages/Profile";
 import Account from "./pages/Account";
 import AuthProvider from "./context/AuthContext";
 import Breadcrumb from "./components/Breadcrumb";
+
 export default function App() {
   return (
     <AuthProvider>
@@ -33,17 +33,18 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/collection/:collection" element={<Product />} />
           <Route path="/collection" element={<Collection />} />
+          <Route path="/collection/:collection" element={<Product />} />
+          {/* Gộp cả 2 đường dẫn cho ProductDetail */}
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/collection/:collection/:id" element={<ProductDetail />} />
           <Route path="/account" element={<Account />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/search" element={<SearchResults />} />
         </Routes>
         <Footer />
-       
       </CartProvider>
     </AuthProvider>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaMinus, FaPlus, FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 export default function FigureProduct({ images }) {
     const [selectedImg, setSelectedImg] = useState(images[0]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,13 +29,13 @@ export default function FigureProduct({ images }) {
                 />
                 <button
                     onClick={handlePrev}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white p-2 rounded-full shadow"
+                    className="absolute left-0.5 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white p-2 rounded-full shadow"
                 >
                     <FaAngleLeft />
                 </button>
                 <button
                     onClick={handleNext}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white p-2 rounded-full shadow"
+                    className="absolute right-0.5 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white p-2 rounded-full shadow"
                 >
                     <FaAngleRight />
                 </button>

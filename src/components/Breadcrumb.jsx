@@ -8,7 +8,7 @@ const Breadcrumb = () => {
   return (
     <div className="bg-gray-100 py-2">
       <nav
-        className="w-6xl mx-auto text-sm text-gray-500 "
+        className="w-6xl mx-auto text-sm text-gray-500 py-3 "
         aria-label="Breadcrumb"
       >
         <ol className="list-reset flex items-center space-x-2">
