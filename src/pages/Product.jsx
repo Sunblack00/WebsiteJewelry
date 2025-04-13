@@ -44,6 +44,8 @@ export default function Product() {
       filtered.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
     } else if (sortOption === "HL") {
       filtered.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    } else if (sortOption === "BS") {
+      filtered.sort((a, b) => b.recentlySold - a.recentlySold);
     }
 
     setTitle(collection === "all" ? "product" : collection);
