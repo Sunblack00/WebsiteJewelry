@@ -16,7 +16,12 @@ const AuthProvider = ({ children }) => {
   const [formLogin, setFormLogin] = useState({
     loginEmail: "",
     loginPassword: "",
+  });
+
+  const [formResetPwd, setFormResetPwd] = useState({
     resetEmail: "",
+    resetPassword: "",
+    resetPasswordConfirm: "",
   });
   useEffect(() => {
     const savedToken = localStorage.getItem("token");
@@ -33,6 +38,11 @@ const AuthProvider = ({ children }) => {
 
     setFormLogin({
       ...formLogin,
+      [e.target.name]: e.target.value,
+    });
+
+    setFormResetPwd({
+      ...formResetPwd,
       [e.target.name]: e.target.value,
     });
   };
@@ -98,9 +108,41 @@ const AuthProvider = ({ children }) => {
           Authorization: `Bearer ${loginToken}`,
         },
       });
+
       setUser(res.data.user);
     } catch (error) {
       alert("Fail to loading profile");
+    }
+  };
+
+  const checkEmail = async () => {
+    try {
+      const res = await axios.post("http://localhost:1361/api/verifyemail", {
+        email: formResetPwd.resetEmail,
+      });
+      alert(res.data.message);
+      return true;
+    } catch (error) {
+      alert("Email khong hop le");
+      return false;
+    }
+  };
+
+  const handleChangePassword = async () => {
+    if (formResetPwd.resetPassword !== formResetPwd.resetPasswordConfirm) {
+      setError("Mật khẩu không khớp!");
+      return;
+    }
+    setError("");
+    try {
+      const res = await axios.post("http://localhost:1361/api/resetpassword", {
+        email: formResetPwd.resetEmail,
+        newPassword: formResetPwd.resetPassword,
+      });
+
+      alert(res.data.message);
+    } catch (error) {
+      alert("Fail To Change Password!!!");
     }
   };
   return (
@@ -116,6 +158,9 @@ const AuthProvider = ({ children }) => {
         user,
         logout,
         fetchProfile,
+        checkEmail,
+        handleChangePassword,
+        formResetPwd,
       }}
     >
       {children}
