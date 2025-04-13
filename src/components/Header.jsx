@@ -7,6 +7,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CartContext } from "../store/CartContext";
 import { useAuth } from "../context/AuthContext";
 import MiniCart from "./Cart/MiniCart";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { user } = useAuth(); // FIX lỗi user undefined
@@ -18,6 +19,32 @@ export default function Header() {
   const cartIconRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useState(() => {
+    console.log(searchTerm);
+  });
+
+  const dropIn = {
+    hidden: {
+      y: "-100vh",
+      opacity: 0,
+    },
+    visible: {
+      y: "0",
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        type: "spring",
+        damping: 25,
+        stiffness: 300,
+      },
+    },
+    exit: {
+      y: "-100vh",
+      opacity: 0,
+      transition: { duration: 0.3 },
+    },
+  };
 
   const navItems = [
     { path: "/", label: "HOME" },
@@ -110,7 +137,9 @@ export default function Header() {
 
             {/* Icon tìm kiếm */}
             <button
-              onClick={() => setIsSearchOpen(true)}
+              onClick={() => {
+                setSearchTerm(""), setIsSearchOpen(true);
+              }}
               className="hover:opacity-25 transition-all duration-500"
             >
               <BiSearchAlt size={"25px"} />
@@ -145,39 +174,55 @@ export default function Header() {
       </div>
 
       {/* Modal tìm kiếm */}
-      {isSearchOpen && (
-        <div className="fixed inset-0 z-50 flex justify-center bg-transparent">
-          <div className="absolute top-0 w-full h-full bg-gradient-to-b from-transparent via-white bg-opacity-30"></div>
-
-          <div className="relative w-full h-[30%] bg-white p-8 rounded-lg shadow-lg animate-fadeIn">
-            <button
-              className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black"
+      <AnimatePresence>
+        {isSearchOpen && (
+          <div className="fixed inset-0 z-50 flex justify-center bg-transparent">
+            <div
+              className="absolute top-0 w-full h-full bg-black/10"
               onClick={() => setIsSearchOpen(false)}
+            ></div>
+
+            <motion.div
+              variants={dropIn}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="relative w-full h-[30%] bg-white p-20 rounded-lg shadow-lg"
             >
-              &times;
-            </button>
+              <button
+                className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black"
+                onClick={() => setIsSearchOpen(false)}
+              >
+                &times;
+              </button>
 
-            <p className="uppercase text-sm font-semibold mb-6 text-gray-700">
-              What are you looking for?
-            </p>
+              <p className="uppercase text-sm font-semibold mb-6 text-gray-700">
+                What are you looking for?
+              </p>
 
-            <div className="flex items-center border-b border-gray-300 py-2">
-              <BiSearchAlt
-                size={24}
-                className="mr-3 text-black"
-                onClick={handleSearchSubmit}
-              />
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-full outline-none text-lg bg-transparent"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
+              <div className="flex items-center border-b border-gray-300 py-2">
+                <BiSearchAlt
+                  size={24}
+                  className="mr-3 text-black"
+                  onClick={handleSearchSubmit}
+                />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="w-full outline-none text-lg bg-transparent"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSearchSubmit();
+                    }
+                  }}
+                />
+              </div>
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </>
   );
 }

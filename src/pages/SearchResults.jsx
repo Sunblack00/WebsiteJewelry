@@ -38,7 +38,7 @@ const SearchResults = () => {
       const matchesQuery = blog.title.toLowerCase().includes(query);
       const matchesType =
         selectedType === "All" ||
-        selectedType === "Blog articles" ||
+        selectedType === "Blog" ||
         blog.type === selectedType;
       return matchesQuery && matchesType;
     });
@@ -51,7 +51,7 @@ const SearchResults = () => {
         product.shortDescription.toLowerCase().includes(query);
       const matchesType =
         selectedType === "All" ||
-        selectedType === "Products" ||
+        selectedType === "Product" ||
         product.loc === selectedType;
       return matchesQuery && matchesType;
     });
@@ -60,9 +60,12 @@ const SearchResults = () => {
 
   // Sliced data for pagination
   const currentBlogs = filteredBlogs.slice(indexOfFirstUser, indexOfLastUser);
-  const currentProducts = filteredProducts.slice(indexOfFirstUser, indexOfLastUser);
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstUser,
+    indexOfLastUser
+  );
 
-  const types = ["All", "Blog articles", "Pages", "Products"];
+  const types = ["All", "Blog", "Product"];
 
   return (
     <div style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -74,7 +77,7 @@ const SearchResults = () => {
         </h1>
 
         {/* Bộ lọc loại nằm bên trái */}
-        <div className="flex flex-col gap-4 mb-8 items-start">
+        <div className="flex flex-col gap-1 mb-8 items-start">
           {types.map((type) => (
             <button
               key={type}
@@ -99,75 +102,97 @@ const SearchResults = () => {
           ) : (
             <div>
               {/* Blog Results */}
-              {(selectedType === "All" || selectedType === "Blog articles") && currentBlogs.length > 0 && (
-  <div>
-    <h2 className="text-xl font-bold text-black mt-5 mb-6 border-b pb-2">Blog Articles</h2>
-    <div className="space-y-8">
-      {currentBlogs.map((blog) => (
-        <div
-          key={blog.id}
-          className="flex flex-col md:flex-row items-start gap-4 border-b pb-6 transition-all duration-300 ease-in-out hover:shadow-md hover:bg-gray-50 rounded-lg p-3"
-        >
-          {blog.img && (
-            <img
-              src={blog.img}
-              alt={blog.title}
-              className="w-full md:w-48 h-32 object-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-          )}
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold text-black hover:text-blue-600 transition-colors duration-200">
-              {blog.title}
-            </h3>
-            <p className="text-sm text-gray-500">{blog.date}</p>
-            <p className="mt-2 text-gray-700 text-sm line-clamp-3">{blog.intro}</p>
-            <a
-              href={`/blog/${blog.id}`}
-              className="text-blue-600 text-sm mt-3 inline-block hover:underline transition-all"
-            >
-              Xem chi tiết →
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-)}
-
+              {(selectedType === "All" || selectedType === "Blog") &&
+                currentBlogs.length > 0 && (
+                  <div>
+                    {selectedType === "All" ? (
+                      <h2 className="text-xl font-bold text-black mt-5 mb-6 pb-2">
+                        Blog
+                      </h2>
+                    ) : (
+                      ""
+                    )}
+                    <div className="space-y-8">
+                      {currentBlogs.map((blog) => (
+                        <div
+                          key={blog.id}
+                          className="flex flex-col md:flex-row items-start gap-4 rounded-lg p-3 mt-14"
+                        >
+                          {blog.img && (
+                            <img
+                              src={blog.img}
+                              alt={blog.title}
+                              className="w-full md:w-48 h-32 object-cover rounded-lg "
+                            />
+                          )}
+                          <div className="flex-1">
+                            <h3 className="text-lg font-semibold text-black ">
+                              {blog.title}
+                            </h3>
+                            <p className="text-sm text-gray-500">{blog.date}</p>
+                            <p className="mt-2 text-gray-700 text-sm line-clamp-3">
+                              {blog.intro}
+                            </p>
+                            <a
+                              href={`/blog/${blog.id}`}
+                              className="text-blue-600 text-sm mt-3 inline-block hover:underline transition-all"
+                            >
+                              Xem chi tiết →
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
               {/* Product Results */}
-              {(selectedType === "All" || selectedType === "Products") && currentProducts.length > 0 && (
-                <div>
-                  <h1 className="text-xl font-bold text-black mt-20">Products</h1>
-                  <ListProduct products={currentProducts} /> {/* Bạn có thể dùng component này để hiển thị sản phẩm */}
-                </div>
-              )}
+              {(selectedType === "All" || selectedType === "Product") &&
+                currentProducts.length > 0 && (
+                  <div>
+                    {selectedType === "All" ? (
+                      <h2 className="text-xl font-bold text-black mt-5 mb-6 pb-2">
+                        Product
+                      </h2>
+                    ) : (
+                      ""
+                    )}
+                    <ListProduct products={currentProducts} />{" "}
+                    {/* Bạn có thể dùng component này để hiển thị sản phẩm */}
+                  </div>
+                )}
             </div>
           )}
-
           {/* Phân trang */}
-          <div
-            className="flex justify-between items-center m-auto text-gray-500/90 mb-40"
-            style={{ width: "70%" }}
-          >
-            {currentPage !== 1 && (
-              <button
-                className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
-                onClick={() => {
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                  setCurrentPage(currentPage - 1);
-                }}
-              >
-                <ChevronLeft className="w-6 h-6 text-gray-500 me-2" />
-                previous
-              </button>
-            )}
-            <div className="flex justify-center space-x-2 text-gray-500/90 absolute left-1/2 -translate-x-1/2 gap-2">
-              {[...Array(Math.ceil((filteredBlogs.length + filteredProducts.length) / usersPerPage))].map(
-                (_, index) => (
+          {filteredBlogs.length !== 0 || filteredProducts.length !== 0 ? (
+            <div
+              className="flex justify-between items-center m-auto text-gray-500/90 mb-40 mt-10"
+              style={{ width: "70%" }}
+            >
+              {currentPage !== 1 && (
+                <button
+                  className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                    setCurrentPage(currentPage - 1);
+                  }}
+                >
+                  <ChevronLeft className="w-6 h-6 text-gray-500 me-2" />
+                  previous
+                </button>
+              )}
+              <div className="flex justify-center space-x-2 text-gray-500/90 absolute left-1/2 -translate-x-1/2 gap-2">
+                {[
+                  ...Array(
+                    Math.ceil(
+                      (filteredBlogs.length + filteredProducts.length) /
+                        usersPerPage
+                    )
+                  ),
+                ].map((_, index) => (
                   <button
                     key={index}
                     className={`px-0.5 mx-1 py-1 border-b-1 hover:border-b-gray-950 ${
@@ -185,25 +210,31 @@ const SearchResults = () => {
                   >
                     {index + 1}
                   </button>
-                )
+                ))}
+              </div>
+              {currentPage !==
+                Math.ceil(
+                  (filteredBlogs.length + filteredProducts.length) /
+                    usersPerPage
+                ) && (
+                <button
+                  className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                    setCurrentPage(currentPage + 1);
+                  }}
+                >
+                  next
+                  <ChevronRight className="w-6 h-6 text-gray-500 ms-2" />
+                </button>
               )}
             </div>
-            {currentPage !== Math.ceil((filteredBlogs.length + filteredProducts.length) / usersPerPage) && (
-              <button
-                className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
-                onClick={() => {
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                  setCurrentPage(currentPage + 1);
-                }}
-              >
-                next
-                <ChevronRight className="w-6 h-6 text-gray-500 ms-2" />
-              </button>
-            )}
-          </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

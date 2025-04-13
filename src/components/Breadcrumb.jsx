@@ -9,10 +9,8 @@ const Breadcrumb = () => {
 
   useEffect(() => {
     const id = parseInt(pathNames[2]);
-    console.log(id);
     if (id) {
       const matched = jewwelry.find((item) => item.id === id);
-      console.log("ten" + matched);
       if (matched) {
         setItemName(matched.name);
       } else {
@@ -24,7 +22,7 @@ const Breadcrumb = () => {
   return (
     <>
       {pathNames.length !== 0 ? (
-        <div className="bg-gray-100 py-2">
+        <div className="bg-gray-100 py-0.5">
           <nav
             className="w-6xl mx-auto text-sm text-gray-500 py-3"
             aria-label="Breadcrumb"

@@ -21,7 +21,6 @@ export default function Banner() {
           Need a perfect jewelry? We are here to help you.
         </p>
         <p className="lead text-white text-2xl">
-          {" "}
           We have over 10,000 of diamonds to choose from.
         </p>
         <button
