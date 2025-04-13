@@ -68,8 +68,11 @@ const AboutUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
           <div>
-            {/* Replace with your image */}
-            <div className="w-full h-64 bg-gray-200 rounded-2xl shadow-inner"></div>
+            <div class="w-full h-64 bg-gray-200 rounded-2xl shadow-inner">
+              <img src="../../public/images/about/banner_1_1080x.webp" alt="Mô tả hình ảnh" class="w-full h-full object-cover rounded-2xl" />
+
+            </div>
+
           </div>
           <div>
             <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
@@ -93,8 +96,10 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="order-1 md:order-2">
-            {/* Replace with your image */}
-            <div className="w-full h-64 bg-gray-200 rounded-2xl shadow-inner"></div>
+            <div class="w-full h-64 bg-gray-200 rounded-2xl shadow-inner">
+              <img src="../../public/images/about/banner_2_1080x.webp" alt="Mô tả hình ảnh" class="w-full h-full object-cover rounded-2xl" />
+            </div>
+
           </div>
         </div>
 
