@@ -29,7 +29,7 @@ const AuthProvider = ({ children }) => {
       setToken(savedToken);
       fetchProfile(savedToken);
     }
-  }, []);
+  }, [1]);
   const handleChange = (e) => {
     setFormRegister({
       ...formRegister,
@@ -99,6 +99,10 @@ const AuthProvider = ({ children }) => {
     setToken(null);
     setUser(null);
     localStorage.removeItem("token");
+    setFormLogin({
+      loginEmail: "",
+      loginPassword: "",
+    });
   };
 
   const fetchProfile = async (loginToken) => {

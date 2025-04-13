@@ -124,7 +124,7 @@ export default function Header() {
           </ul>
 
           <div className="flex items-center space-x-8">
-            <Link to={"/account"}>
+            <Link to={user ? "/profile" : "/account"}>
               <div className="flex items-center gap-2 hover:opacity-25 transition-all duration-500">
                 {user && (
                   <p className="text-xs">
