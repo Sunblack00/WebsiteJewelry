@@ -5,8 +5,8 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="bg-white  py-12">
-        <div className=" bg-gray-200 text-center mb-12 py-13">
+      <div className="bg-white ">
+        <div className=" text-center mb-30 py-17 "> 
           <h1 className="text-5xl font-bold mb-2">Contact Us</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mb-12 mx-auto w-[80%]">
