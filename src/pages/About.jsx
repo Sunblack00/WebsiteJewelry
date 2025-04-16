@@ -69,7 +69,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
           <div>
             <div class="w-full h-64 bg-gray-200 rounded-2xl shadow-inner">
-              <img src="../../public/images/about/banner_1_1080x.webp" alt="Mô tả hình ảnh" class="w-full h-full object-cover rounded-2xl" />
+              <img src="../images/about/banner_1_1080x.webp" alt="Mô tả hình ảnh" class="w-full h-full object-cover rounded-2xl" />
 
             </div>
 
@@ -97,7 +97,7 @@ const AboutUs = () => {
           </div>
           <div className="order-1 md:order-2">
             <div class="w-full h-64 bg-gray-200 rounded-2xl shadow-inner">
-              <img src="../../public/images/about/banner_2_1080x.webp" alt="Mô tả hình ảnh" class="w-full h-full object-cover rounded-2xl" />
+              <img src="../images/about/banner_2_1080x.webp" alt="Mô tả hình ảnh" class="w-full h-full object-cover rounded-2xl" />
             </div>
 
           </div>
