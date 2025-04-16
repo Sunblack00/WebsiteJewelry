@@ -11,23 +11,10 @@ export default function MiniCart() {
     const { cartItems, totalPrice, removeFromCart, clearCart } =
         useContext(CartContext);
 
-    const handleRemove = useCallback(
-        (id, selectedOption) => {
-            removeFromCart(id, selectedOption);
-        },
-        [removeFromCart]
-    );
-
-    const handleClearCart = useCallback(() => {
-        clearCart();
-    }, [clearCart]);
-
     if (cartItems.length === 0) {
         return (
             <div className="w-100 bg-white shadow-md rounded-lg p-4 absolute top-12 right-0 z-50">
-                <p className="text-center text-gray-500">
-                    Your cart is empty
-                </p>
+                <p className="text-center text-gray-500">Your cart is empty</p>
                 <Link
                     to="/collection/all"
                     className="block text-center text-[#EFE0E5] mt-4 hover:underline"
