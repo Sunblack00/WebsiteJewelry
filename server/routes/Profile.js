@@ -8,9 +8,7 @@ const SECRET_KEY = "22691361";
 //Kiem tra token
 function verifyToken(req, res, next) {
   const authHeader = req.headers["authorization"];
-  console.log(authHeader);
   const token = authHeader && authHeader.split(" ")[1];
-  console.log("TOKEN:", token);
   if (!token) return res.status(401).json({ message: "Token khong ton tai" });
 
   try {

@@ -1,6 +1,14 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { CartContext } from "../store/CartContext";
+import { currencyFormatter } from "../util/formatting";
 const AccountInfo = ({ user }) => {
+  const {
+    cartItems,
+    totalQuantity,
+    totalPrice,
+    removeFromCart,
+    updateQuantity,
+  } = useContext(CartContext);
   return (
     <div>
       <form>
@@ -20,13 +28,13 @@ const AccountInfo = ({ user }) => {
         <div className="">
           {" "}
           <div className=" flex flex-col">
-            <label htmlFor="accName" className="text-lg my-2">
+            <label htmlFor="email" className="text-lg my-2">
               Email
             </label>
             <input
-              type="text"
-              name="accName"
-              id="accName"
+              type={"email"}
+              name="email"
+              id="email"
               className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
               disabled
               value={user.email}
@@ -36,30 +44,32 @@ const AccountInfo = ({ user }) => {
         <div className="">
           {" "}
           <div className=" flex flex-col">
-            <label htmlFor="accName" className="text-lg my-2">
-              Order details
+            <label htmlFor="orderCount" className="text-lg my-2">
+              Order Count
             </label>
             <input
               type="text"
-              name="accName"
-              id="accName"
+              name="orderCount"
+              id="orderCount"
               className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
               disabled
+              value={totalQuantity}
             />
           </div>
         </div>
         <div className="">
           {" "}
           <div className=" flex flex-col">
-            <label htmlFor="accName" className="text-lg my-2">
+            <label htmlFor="totalSpent" className="text-lg my-2">
               Total spent
             </label>
             <input
               type="text"
-              name="accName"
-              id="accName"
+              name="totalSpent"
+              id="totalSpent"
               className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
               disabled
+              value={currencyFormatter.format(totalPrice)}
             />
           </div>
         </div>

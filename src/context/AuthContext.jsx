@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 export const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
@@ -16,8 +16,20 @@ const AuthProvider = ({ children }) => {
   const [formLogin, setFormLogin] = useState({
     loginEmail: "",
     loginPassword: "",
-    resetEmail: "",
   });
+
+  const [formResetPwd, setFormResetPwd] = useState({
+    resetEmail: "",
+    resetPassword: "",
+    resetPasswordConfirm: "",
+  });
+  useEffect(() => {
+    const savedToken = localStorage.getItem("token");
+    if (savedToken) {
+      setToken(savedToken);
+      fetchProfile(savedToken);
+    }
+  }, [1]);
   const handleChange = (e) => {
     setFormRegister({
       ...formRegister,
@@ -26,6 +38,11 @@ const AuthProvider = ({ children }) => {
 
     setFormLogin({
       ...formLogin,
+      [e.target.name]: e.target.value,
+    });
+
+    setFormResetPwd({
+      ...formResetPwd,
       [e.target.name]: e.target.value,
     });
   };
@@ -66,6 +83,13 @@ const AuthProvider = ({ children }) => {
       });
 
       alert(res.data.message);
+      setFormRegister({
+        fname: "",
+        lname: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
     } catch (err) {
       alert("Register Fail");
     }
@@ -74,6 +98,11 @@ const AuthProvider = ({ children }) => {
   const logout = () => {
     setToken(null);
     setUser(null);
+    localStorage.removeItem("token");
+    setFormLogin({
+      loginEmail: "",
+      loginPassword: "",
+    });
   };
 
   const fetchProfile = async (loginToken) => {
@@ -83,9 +112,41 @@ const AuthProvider = ({ children }) => {
           Authorization: `Bearer ${loginToken}`,
         },
       });
+
       setUser(res.data.user);
     } catch (error) {
       alert("Fail to loading profile");
+    }
+  };
+
+  const checkEmail = async () => {
+    try {
+      const res = await axios.post("http://localhost:1361/api/verifyemail", {
+        email: formResetPwd.resetEmail,
+      });
+      alert(res.data.message);
+      return true;
+    } catch (error) {
+      alert("Email khong hop le");
+      return false;
+    }
+  };
+
+  const handleChangePassword = async () => {
+    if (formResetPwd.resetPassword !== formResetPwd.resetPasswordConfirm) {
+      setError("Mật khẩu không khớp!");
+      return;
+    }
+    setError("");
+    try {
+      const res = await axios.post("http://localhost:1361/api/resetpassword", {
+        email: formResetPwd.resetEmail,
+        newPassword: formResetPwd.resetPassword,
+      });
+
+      alert(res.data.message);
+    } catch (error) {
+      alert("Fail To Change Password!!!");
     }
   };
   return (
@@ -101,6 +162,9 @@ const AuthProvider = ({ children }) => {
         user,
         logout,
         fetchProfile,
+        checkEmail,
+        handleChangePassword,
+        formResetPwd,
       }}
     >
       {children}

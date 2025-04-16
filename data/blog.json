@@ -5,6 +5,7 @@
     "date": "NOV 29, 2018",
     "commentsCount": 2,
     "img": "../images/blog/blog_3_720x.webp",
+    "type": "Blog articles",
     "comments": [
       {
         "id": 1,
@@ -32,6 +33,7 @@
     "date": "NOV 29, 2018",
     "commentsCount": 1,
     "img": "../images/blog/blog_2_720x.webp",
+    "type": "Blog articles",
     "comments": [
       {
         "id": 1,
@@ -53,6 +55,7 @@
     "date": "NOV 29, 2018",
     "commentsCount": 4,
     "img": "../images/blog/blog_1_720x.webp",
+    "type": "Blog articles",
     "comments": [
         {
     "id": 1,
@@ -90,5 +93,6 @@
   "There are two types of jewelry – stones and metals.  Our products are a combination of classic and modern style; we can satisfy any demands of customers, that is why we have so many fans.  the magical shine of our products will bring you the best of luck!Our products are a combination of classic and modern style; we can satisfy any demands of customers."
 ]
   }
+  
 ]
 

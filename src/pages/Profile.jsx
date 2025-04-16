@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import AccountInfo from "../components/AccountInfo";
 import { useNavigate } from "react-router-dom";
+import OrdersInfo from "../components/OrdersInfo";
 
 const Profile = () => {
   const navigation = useNavigate();
@@ -32,13 +33,17 @@ const Profile = () => {
         <h1 className="text-5xl font-bold text-center mt-16 mb-6">
           Welcome, {user.name}
         </h1>
-        <p className="text-lg w-lg text-center">
+        <p className="text-lg w-md mx-auto text-center">
           From your "My Account" page you have the ability to view your recent
           account activity and update your account information. Just select a
           link below.
         </p>
       </div>
-      <div className="flex mt-20 gap-36 justify-between">
+      <div
+        className={`flex mt-20 w-5xl ${
+          isActive === "Orders" ? "justify-start gap-10" : "justify-between "
+        }`}
+      >
         <div className="w-2xs">
           <ul className="border border-gray-200">
             {option.map((item) => (
@@ -56,8 +61,11 @@ const Profile = () => {
             ))}
           </ul>
         </div>
-        <div className="col-span-4">
-          <AccountInfo user={user} />
+        <div>
+          {isActive === "Account information" && <AccountInfo user={user} />}
+          {isActive === "Default address" && <AccountInfo user={user} />}
+          {isActive === "Orders" && <OrdersInfo />}
+          {isActive === "Wishlist" && <AccountInfo user={user} />}
         </div>
       </div>
     </div>

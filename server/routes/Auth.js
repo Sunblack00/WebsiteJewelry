@@ -20,7 +20,6 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  console.log("Received login data:", req.body);
   const { email, password } = req.body;
   const user = await User.findOne({ email });
 
@@ -38,6 +37,29 @@ router.post("/login", async (req, res) => {
   );
 
   res.json({ message: "Dang nhap thanh cong", token, user });
+});
+
+router.post("/verifyemail", async (req, res) => {
+  const { email } = req.body;
+  const user = await User.findOne({ email });
+
+  if (!user) return res.status(401).json({ message: "Email khong ton tai" });
+
+  res.json({ message: "Da tim thay email duoc luu", email });
+});
+
+router.post("/resetpassword", async (req, res) => {
+  const { email, newPassword } = req.body;
+  const user = await User.findOne({ email });
+
+  if (!user)
+    return res.status(401).json({ message: "Khong tim thay tai khoan" });
+
+  const hashPassword = await bcrypt.hash(newPassword, 10);
+  user.password = hashPassword;
+  await user.save();
+
+  res.status(200).json({ message: "Update Password Successfully!!!" });
 });
 
 module.exports = router;

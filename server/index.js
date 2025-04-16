@@ -2,15 +2,18 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
+require("dotenv").config();
 const app = express();
-const PORT = 1361;
-const SECRET_KEY = "22691361";
+const PORT = process.env.PORT;
+const SECRET_KEY = process.env.SECRET_KEY;
 
 const authRouter = require("./routes/Auth");
 const profileRouter = require("./routes/Profile");
 
-mongoose.connect("mongodb://127.0.0.1:27017/jewelry-auth");
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ Kết nối MongoDB thành công"))
+  .catch((err) => console.error("Lỗi MongoDB:", err));
 
 app.use(cors());
 app.use(bodyParser.json());
