@@ -18,25 +18,42 @@ export const CartContext = createContext({
 });
 
 export default function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
-  // // ✅ Load giỏ hàng từ localStorage khi app khởi động
-  // useEffect(() => {
-  //     const storedCart = localStorage.getItem("cart-items");
-  //     if (storedCart) {
-  //         try {
-  //             const parsed = JSON.parse(storedCart);
-  //             console.log("Loaded cart from localStorage:", parsed);
-  //             setCartItems(parsed);
-  //         } catch (e) {
-  //             console.error("Lỗi khi parse cart từ localStorage:", e);
-  //         }
-  //     }
-  // }, []);
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const storedCart = localStorage.getItem("cart-items");
+      return storedCart ? JSON.parse(storedCart) : [];
+    } catch (error) {
+      console.error("Lỗi khi đọc giỏ hàng từ localStorage:", error);
+      return [];
+    }
+  });
 
-  // // ✅ Tự động lưu cart vào localStorage khi cartItems thay đổi
-  // useEffect(() => {
-  //     localStorage.setItem("cart-items", JSON.stringify(cartItems));
-  // }, [cartItems]);
+  // ✅ Load giỏ hàng từ localStorage khi app khởi động
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart-items");
+    if (storedCart) {
+      try {
+        const parsed = JSON.parse(storedCart);
+        console.log("Loaded cart from localStorage:", parsed);
+        setCartItems(parsed);
+      } catch (e) {
+        console.error("Lỗi khi parse cart từ localStorage:", e);
+      }
+    }
+  }, []);
+
+  // ✅ Tự động lưu cart vào localStorage khi cartItems thay đổi
+  useEffect(() => {
+    localStorage.setItem("cart-items", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("cart-items", JSON.stringify(cartItems));
+    } catch (error) {
+      console.error("Lỗi khi lưu giỏ hàng vào localStorage:", error);
+    }
+  }, [cartItems]);
 
   function handleAddItemToCart(newItem) {
     setCartItems((prevItems) => {
