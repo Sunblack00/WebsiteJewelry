@@ -1,5 +1,4 @@
 import ListProduct from "../components/ListProduct";
-
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -7,13 +6,13 @@ import axios from "axios";
 
 export default function Product() {
   const [currentPage, setCurrentPage] = useState(1);
-  const usersPerPage = 6;
-  const indexOfLastUser = currentPage * usersPerPage;
-  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const productPerPage = 6;
+  const indexOfLastProduct = currentPage * productPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productPerPage;
   const [title, setTitle] = useState("");
   const { collection } = useParams();
   const [init, setInit] = useState([]);
-  const currentProduct = init.slice(indexOfFirstUser, indexOfLastUser);
+  const currentProduct = init.slice(indexOfFirstProduct, indexOfLastProduct);
   const [sortOption, setSortOption] = useState("BS");
   const [priceRange, setPriceRange] = useState("");
 
@@ -139,7 +138,7 @@ export default function Product() {
               ""
             )}
             <div className="flex justify-center space-x-2 text-gray-500/90 absolute left-1/2 -translate-x-1/2 gap-2">
-              {[...Array(Math.ceil(init.length / usersPerPage))].map(
+              {[...Array(Math.ceil(init.length / productPerPage))].map(
                 (_, index) => (
                   <button
                     key={index}
@@ -161,7 +160,7 @@ export default function Product() {
                 )
               )}
             </div>
-            {currentPage != Math.ceil(init.length / usersPerPage) ? (
+            {currentPage != Math.ceil(init.length / productPerPage) ? (
               <button
                 className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300 absolute right-0"
                 onClick={() => {
