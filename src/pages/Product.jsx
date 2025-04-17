@@ -72,36 +72,42 @@ export default function Product() {
   }, [collection, sortOption, priceRange]);
   return (
     <>
-      <p className="capitalize text-5xl font-semibold text-center mt-10 ">
+      <p
+        className="capitalize text-7xl font-semibold text-center mt-20 "
+        style={{ fontFamily: "Allura, cursive" }}
+      >
         {title}
       </p>
       <div
-        className="flex gap-5 items-center m-auto"
+        className="flex gap-5 items-center justify-between m-auto"
         style={{ width: "70%", marginBottom: "-40px", marginTop: "60px" }}
       >
-        <p>Sort: </p>
-        <select
-          className="w-[170px] p-2 rounded-lg text-gray-600/60 focus:outline-none"
-          value={sortOption}
-          onChange={(e) => setSortOption(e.target.value)}
-        >
-          <option value="BS">Best Selling</option>
-          <option value="AZ">From A To Z</option>
-          <option value="ZA">From Z To A</option>
-          <option value="LH">Price, Low To High</option>
-          <option value="HL">Price, High To Low</option>
-        </select>
-        <select
-          className="w-[170px] p-2 rounded-lg text-gray-600/60 focus:outline-none"
-          value={priceRange}
-          onChange={(e) => setPriceRange(e.target.value)}
-        >
-          <option value="">Select Price</option>
-          <option value="0-100">$0 - $100</option>
-          <option value="100-300">$100 - $300</option>
-          <option value="300-500">$300 - $500</option>
-          <option value="500+">$500+</option>
-        </select>
+        <div className="flex gap-5 items-center">
+          <p>Sort: </p>
+          <select
+            className="w-[170px] p-2 rounded-lg text-gray-600/60 focus:outline-none"
+            value={sortOption}
+            onChange={(e) => setSortOption(e.target.value)}
+          >
+            <option value="BS">Best Selling</option>
+            <option value="AZ">From A To Z</option>
+            <option value="ZA">From Z To A</option>
+            <option value="LH">Price, Low To High</option>
+            <option value="HL">Price, High To Low</option>
+          </select>
+          <select
+            className="w-[170px] p-2 rounded-lg text-gray-600/60 focus:outline-none"
+            value={priceRange}
+            onChange={(e) => setPriceRange(e.target.value)}
+          >
+            <option value="">Select Price</option>
+            <option value="0-100">$0 - $100</option>
+            <option value="100-300">$100 - $300</option>
+            <option value="300-500">$300 - $500</option>
+            <option value="500+">$500+</option>
+          </select>
+        </div>
+        <p className="text-gray-600/60">{init.length} products</p>
       </div>
 
       {init.length === 0 ? (
