@@ -8,7 +8,6 @@ const ProductOption = React.memo(function ProductOption({
     option,
     onModal,
 }) {
-    console.log("alo");
     return (
         <div>
             <div className="flex justify-between items-center">

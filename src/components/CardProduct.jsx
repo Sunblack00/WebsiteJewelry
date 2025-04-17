@@ -25,7 +25,7 @@ export default function CardProduct({ item }) {
         <p className="font-semibold hover:opacity-50 cursor-pointer">
           {item.name}
         </p>
-        <p className="mt-2 text-xl" style={{ fontFamily: "Allura, cursive" }}>
+        <p className="mt-2 text-3xl" style={{ fontFamily: "Allura, cursive" }}>
           $ {item.variants[0].price}
         </p>
       </div>
