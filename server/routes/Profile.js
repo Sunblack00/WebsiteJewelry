@@ -9,10 +9,12 @@ const SECRET_KEY = process.env.SECRET_KEY;
 function verifyToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
+  console.log("Received token:", token);
 
   if (!token) return res.status(401).json({ message: "Token khong ton tai" });
   try {
     const decoded = jwt.verify(token, SECRET_KEY);
+    console.log("Decoded token:", decoded);
     req.user = decoded;
     next();
   } catch (error) {
