@@ -14,7 +14,7 @@ const AccountInfo = ({ user }) => {
     if (storedOrders) {
       try {
         const orders = JSON.parse(storedOrders);
-
+        // Kiem tra kieu du lieu cua orders co phai la array hay khong
         if (Array.isArray(orders)) {
           const count = orders.length;
           const totalSpent = orders.reduce((sum, order) => {
