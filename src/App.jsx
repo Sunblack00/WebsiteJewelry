@@ -35,8 +35,6 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/collection/:collection" element={<Product />} />
-          {/* Gộp cả 2 đường dẫn cho ProductDetail */}
-          <Route path="/product/:id" element={<ProductDetail />} />
           <Route
             path="/collection/:collection/:id"
             element={<ProductDetail />}
