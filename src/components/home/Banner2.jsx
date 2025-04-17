@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Banner2() {
   const navigate = useNavigate();
@@ -12,7 +13,12 @@ export default function Banner2() {
           alt=""
           className="object-cover w-full"
         />
-        <div className="absolute top-1/2 left-1/6 transform -translate-y-1/2">
+        <motion.div
+          className="absolute top-1/2 left-1/6 transform -translate-y-1/2"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
           <p
             style={{ fontFamily: "Allura, cursive" }}
             className="text-5xl sm:text-5xl md:text-7xl lg:text-9xl font-bold text-white"
@@ -29,7 +35,7 @@ export default function Banner2() {
           >
             Shop now
           </button>
-        </div>
+        </motion.div>
       </div>
 
       <div

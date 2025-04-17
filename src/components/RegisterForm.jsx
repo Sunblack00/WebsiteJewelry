@@ -29,7 +29,7 @@ const RegisterForm = () => {
         break;
 
       case "email":
-        if (value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+        if (value && !/^[A-Z0-9._%+-]+@[a-z]+\.[A-Z]{2,}$/i.test(value)) {
           errorMsg = "Invalid email address";
         }
         break;
@@ -37,14 +37,6 @@ const RegisterForm = () => {
       case "password":
         if (value && value.length < 8) {
           errorMsg = "Password must be at least 8 characters";
-        } else if (value && !/(?=.*[a-z])(?=.*[A-Z])/.test(value)) {
-          errorMsg =
-            "Password must contain both uppercase and lowercase letters";
-        } else if (value && !/(?=.*[0-9])/.test(value)) {
-          errorMsg = "Password must contain at least one number";
-        } else if (value && !/(?=.*[!@#$%^&*])/.test(value)) {
-          errorMsg =
-            "Password must contain at least one special character (!@#$%^&*)";
         }
         break;
 
@@ -65,16 +57,13 @@ const RegisterForm = () => {
   const handleFormChange = (e) => {
     const { name, value } = e.target;
 
-    // Call the original handleChange from context
     handleChange(e);
 
-    // Set validation error
     setErrors((prev) => ({
       ...prev,
       [name]: validateField(name, value),
     }));
 
-    // For confirmPassword, check if it matches whenever password changes
     if (name === "password" && formRegister.confirmPassword) {
       setErrors((prev) => ({
         ...prev,
