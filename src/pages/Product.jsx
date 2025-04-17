@@ -118,12 +118,12 @@ export default function Product() {
         <>
           <ListProduct products={currentProduct}></ListProduct>
           <div
-            className="flex justify-between items-center m-auto text-gray-500/90 mb-40"
+            className="flex justify-between relative items-center m-auto text-gray-500/90 mb-40"
             style={{ width: "70%" }}
           >
             {currentPage != 1 ? (
               <button
-                className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
+                className="uppercase  flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
@@ -163,7 +163,7 @@ export default function Product() {
             </div>
             {currentPage != Math.ceil(init.length / usersPerPage) ? (
               <button
-                className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300"
+                className="uppercase flex cursor-pointer items-center hover:text-black/65 font-medium transition duration-300 absolute right-0"
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
