@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Banner() {
   const navigate = useNavigate();
+
   return (
     <div className="inset-0 h-screen relative">
       <img
@@ -10,7 +12,13 @@ export default function Banner() {
         alt=""
         className="w-full h-full object-cover absolute"
       />
-      <div className="absolute top-2/6 left-1/6">
+
+      <motion.div
+        className="absolute top-2/6 left-1/6"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
         <p
           style={{ fontFamily: "Allura, cursive" }}
           className="text-9xl font-bold text-white"
@@ -29,7 +37,7 @@ export default function Banner() {
         >
           Shop now
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

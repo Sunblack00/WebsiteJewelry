@@ -25,7 +25,7 @@ export default function CartProvider({ children }) {
         return user ? `cart-items-${user.id}` : "cart-items-guest";
     };
 
-    // Load giỏ hàng từ localStorage khi user thay đổi hoặc component mount
+    // Load gio hang tu local storage
     useEffect(() => {
         const storageKey = getCartStorageKey();
         try {
@@ -34,9 +34,7 @@ export default function CartProvider({ children }) {
                 const parsed = JSON.parse(storedCart);
                 if (Array.isArray(parsed)) {
                     setCartItems(parsed);
-                    console.log(`Loaded cart for ${storageKey}:`, parsed);
                 } else {
-                    console.warn(`Dữ liệu trong ${storageKey} không phải mảng`);
                     setCartItems([]);
                 }
             } else {
@@ -46,9 +44,9 @@ export default function CartProvider({ children }) {
             console.error(`Lỗi khi đọc giỏ hàng từ ${storageKey}:`, error);
             setCartItems([]);
         }
-    }, [user]); // Chạy lại khi user thay đổi
+    }, [user]); // Chay lai khi user thay doi
 
-    // Lưu giỏ hàng vào localStorage khi cartItems thay đổi
+    // Luu gio hang vao local
     useEffect(() => {
         const storageKey = getCartStorageKey();
         try {
@@ -59,7 +57,7 @@ export default function CartProvider({ children }) {
         } catch (error) {
             console.error(`Lỗi khi lưu giỏ hàng vào ${storageKey}:`, error);
         }
-    }, [cartItems, user]); // Chạy lại khi cartItems hoặc user thay đổi
+    }, [cartItems, user]); // Chay lai cartItem hoac user thay doi
 
     function handleAddItemToCart(newItem) {
         setCartItems((prevItems) => {
