@@ -1,17 +1,21 @@
-const mongoose = require("mongoose");
 const express = require("express");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const product = require("../model/Product");
-const router = require("./Auth");
-require("dotenv").config();
-
-const SECRET_KEY = process.env.SECRET_KEY;
-
-router.get("/products", async (req, res) => {
+const Product = require("../model/Product");
+const router = express.Router();
+router.get("/", async (req, res) => {
   try {
     const products = await Product.find();
-    res.json(products);
+    const updateProducts = products.map((product) => {
+      return {
+        ...product._doc,
+        imageUrls: product.images.map((image) =>
+          image.replace(
+            "../../images",
+            "https://jewelry-backend-inrv.onrender.com/images"
+          )
+        ),
+      };
+    });
+    res.json(updateProducts);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
