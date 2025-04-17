@@ -24,7 +24,10 @@ export default function ListCollection({ collections }) {
                     style={{ width: "150px", height: "150px" }}
                   />
                   <div>
-                    <p className="text-3xl font-semibold capitalize">
+                    <p
+                      className="text-4xl font-semibold capitalize"
+                      style={{ fontFamily: "Allura, cursive" }}
+                    >
                       {item.name}
                     </p>
                     <p className="font-light">{item.count} Product</p>
@@ -41,7 +44,10 @@ export default function ListCollection({ collections }) {
                   className="flex justify-center items-center group border rounded-2xl border-gray-400/50 hover:border-gray-400 m-5"
                 >
                   <div className="me-18">
-                    <p className="text-3xl font-semibold capitalize">
+                    <p
+                      className="text-4xl font-semibold capitalize"
+                      style={{ fontFamily: "Allura, cursive" }}
+                    >
                       {item.name}
                     </p>
                     <p className="font-light">{item.count} Product</p>
