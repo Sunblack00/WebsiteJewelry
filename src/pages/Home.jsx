@@ -4,9 +4,26 @@ import CollectionSection from "../components/home/CollectionSection";
 import Banner2 from "../components/home/Banner2";
 import ListProduct from "../components/ListProduct";
 import jewelrys from "../../data/jewelry.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
-  const top6Sold = jewelrys
+  const [jewelry, setJewelry] = useState([]);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get(
+          "https://jewelry-backend-inrv.onrender.com/api/products"
+        );
+        setJewelry(res.data);
+      } catch (err) {
+        console.error("Failed to fetch products:", err);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  const top6Sold = jewelry
     .sort((a, b) => b.recentlySold - a.recentlySold)
     .slice(0, 6);
 
