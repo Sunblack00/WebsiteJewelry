@@ -28,7 +28,7 @@ export default function CartProvider({ children }) {
     }
   });
 
-  // ✅ Load giỏ hàng từ localStorage khi app khởi động
+  // Load gio hang tu localStorage
   useEffect(() => {
     const storedCart = localStorage.getItem("cart-items");
     if (storedCart) {
@@ -42,7 +42,7 @@ export default function CartProvider({ children }) {
     }
   }, []);
 
-  // ✅ Tự động lưu cart vào localStorage khi cartItems thay đổi
+  // Tu dong luu vao localStorage
   useEffect(() => {
     localStorage.setItem("cart-items", JSON.stringify(cartItems));
   }, [cartItems]);
