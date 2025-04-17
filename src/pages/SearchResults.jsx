@@ -96,9 +96,7 @@ const SearchResults = () => {
         {/* Kết quả tìm kiếm */}
         <div>
           {filteredBlogs.length === 0 && filteredProducts.length === 0 ? (
-            <p className="text-center text-gray-500">
-              Không có kết quả tìm kiếm nào phù hợp.
-            </p>
+            <p className="text-center text-gray-500">No Results Match</p>
           ) : (
             <div>
               {/* Blog Results */}

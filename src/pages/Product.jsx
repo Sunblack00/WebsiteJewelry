@@ -106,7 +106,7 @@ export default function Product() {
 
       {init.length === 0 ? (
         <p className="text-center text-gray-500 capitalize my-20">
-          Không có kết quả nào phù hợp
+          No results match
         </p>
       ) : (
         <>
