@@ -3,8 +3,10 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../model/User");
+require("dotenv").config();
 
-const SECRET_KEY = "22691361";
+const SECRET_KEY = process.env.SECRET_KEY;
+
 
 router.post("/register", async (req, res) => {
   console.log("Received register data:", req.body);

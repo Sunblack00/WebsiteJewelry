@@ -37,7 +37,10 @@ export default function App() {
           <Route path="/collection/:collection" element={<Product />} />
           {/* Gộp cả 2 đường dẫn cho ProductDetail */}
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/collection/:collection/:id" element={<ProductDetail />} />
+          <Route
+            path="/collection/:collection/:id"
+            element={<ProductDetail />}
+          />
           <Route path="/account" element={<Account />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />

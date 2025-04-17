@@ -20,13 +20,12 @@ const AccountInfo = ({ user }) => {
             type="text"
             name="accName"
             id="accName"
-            className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500 hover:cursor-no-drop"
             disabled
             value={user.name}
           />
         </div>
         <div className="">
-          {" "}
           <div className=" flex flex-col">
             <label htmlFor="email" className="text-lg my-2">
               Email
@@ -35,7 +34,7 @@ const AccountInfo = ({ user }) => {
               type={"email"}
               name="email"
               id="email"
-              className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500 hover:cursor-no-drop"
               disabled
               value={user.email}
             />
@@ -51,7 +50,7 @@ const AccountInfo = ({ user }) => {
               type="text"
               name="orderCount"
               id="orderCount"
-              className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500 hover:cursor-no-drop"
               disabled
               value={totalQuantity}
             />
@@ -67,7 +66,7 @@ const AccountInfo = ({ user }) => {
               type="text"
               name="totalSpent"
               id="totalSpent"
-              className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="w-xl border border-gray-300 rounded-md mb-2 px-2 py-3 focus:outline-none focus:ring-2 focus:ring-gray-500 hover:cursor-no-drop"
               disabled
               value={currencyFormatter.format(totalPrice)}
             />
