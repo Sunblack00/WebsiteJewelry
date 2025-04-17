@@ -1,8 +1,9 @@
 import ListProduct from "../components/ListProduct";
-import jewelry from "../../data/jewelry.json";
+
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import axios from "axios";
 
 export default function Product() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,42 +18,58 @@ export default function Product() {
   const [priceRange, setPriceRange] = useState("");
 
   useEffect(() => {
-    let filtered = [...jewelry];
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get(
+          "https://jewelry-backend-inrv.onrender.com/api/products"
+        );
+        const jewelry = res.data;
+        let filtered = [...jewelry];
+        if (collection !== "all") {
+          filtered = filtered.filter(
+            (item) => item.type.toLowerCase() === collection.toLowerCase()
+          );
+        }
 
-    if (collection !== "all") {
-      filtered = filtered.filter(
-        (item) => item.type.toLowerCase() === collection.toLowerCase()
-      );
-    }
+        if (priceRange) {
+          filtered = filtered.filter((item) => {
+            const price = parseFloat(item.variants[0].price);
+            if (priceRange === "0-100") return price >= 0 && price <= 100;
+            if (priceRange === "100-300") return price > 100 && price <= 300;
+            if (priceRange === "300-500") return price > 300 && price <= 500;
+            if (priceRange === "500+") return price > 500;
+            return true;
+          });
+        }
 
-    if (priceRange) {
-      filtered = filtered.filter((item) => {
-        const price = parseFloat(item.variants[0].price);
-        if (priceRange === "0-100") return price >= 0 && price <= 100;
-        if (priceRange === "100-300") return price > 100 && price <= 300;
-        if (priceRange === "300-500") return price > 300 && price <= 500;
-        if (priceRange === "500+") return price > 500;
-        return true;
-      });
-    }
+        if (sortOption === "AZ") {
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (sortOption === "ZA") {
+          filtered.sort((a, b) => b.name.localeCompare(a.name));
+        } else if (sortOption === "LH") {
+          filtered.sort(
+            (a, b) =>
+              parseFloat(a.variants[0].price) - parseFloat(b.variants[0].price)
+          );
+        } else if (sortOption === "HL") {
+          filtered.sort(
+            (a, b) =>
+              parseFloat(b.variants[0].price) - parseFloat(a.variants[0].price)
+          );
+        } else if (sortOption === "BS") {
+          filtered.sort((a, b) => b.recentlySold - a.recentlySold);
+        }
 
-    if (sortOption === "AZ") {
-      filtered.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortOption === "ZA") {
-      filtered.sort((a, b) => b.name.localeCompare(a.name));
-    } else if (sortOption === "LH") {
-      filtered.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-    } else if (sortOption === "HL") {
-      filtered.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-    } else if (sortOption === "BS") {
-      filtered.sort((a, b) => b.recentlySold - a.recentlySold);
-    }
+        setTitle(collection === "all" ? "product" : collection);
+        setInit(filtered);
+        setCurrentPage(1);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
 
-    setTitle(collection === "all" ? "product" : collection);
-    setInit(filtered);
-    setCurrentPage(1);
+    fetchProducts();
   }, [collection, sortOption, priceRange]);
-
   return (
     <>
       <p className="capitalize text-5xl font-semibold text-center mt-10 ">
