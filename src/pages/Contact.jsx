@@ -24,9 +24,9 @@ const Contact = () => {
   return (
     <>
       <div className="bg-white ">
-        <div className=" text-center mb-30 py-17 ">
-          <h1 className="text-5xl font-bold mb-2">Contact Us</h1>
-        </div>
+         <p className="capitalize text-7xl font-semibold text-center my-10"  style={{ fontFamily: "Allura, cursive" }}>
+        Contact
+      </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mb-12 mx-auto w-[80%]">
           <div>
             <h2 className="text-xl font-semibold mb-2">We're here to help you!</h2>

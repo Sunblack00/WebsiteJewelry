@@ -18,6 +18,9 @@ function Blog() {
       className="bg-white text-black"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
+       <p className="capitalize text-7xl font-semibold text-center mt-10"  style={{ fontFamily: "Allura, cursive" }}>
+        Blog
+      </p>
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogs.map((blog) => (

@@ -60,7 +60,9 @@ const AboutUs = () => {
 
       <div className="bg-white text-gray-800 px-6 py-12 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">About Us</h1>
+         <p className="capitalize text-7xl font-semibold text-center mt-1 mb-5"  style={{ fontFamily: "Allura, cursive" }}>
+        About us
+      </p>
           <p className="text-lg max-w-2xl mx-auto">
             Welcome to our jewelry store – where elegance meets craftsmanship. We are dedicated to bringing you the finest quality jewelry, curated with passion and precision.
           </p>
