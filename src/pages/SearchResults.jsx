@@ -46,9 +46,7 @@ const SearchResults = () => {
 
     // Filter products based on the query and selected type
     const filteredProducts = productList.filter((product) => {
-      const matchesQuery =
-        product.name.toLowerCase().includes(query) ||
-        product.shortDescription.toLowerCase().includes(query);
+      const matchesQuery = product.name.toLowerCase().includes(query);
       const matchesType =
         selectedType === "All" ||
         selectedType === "Product" ||
