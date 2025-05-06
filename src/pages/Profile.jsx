@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import AccountInfo from "../components/AccountInfo";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,12 @@ const Profile = () => {
   const navigation = useNavigate();
   const { user, logout } = useAuth();
   const [isActive, setIsActive] = useState("Account information");
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigation("/profile");
+    }
+  }, []);
   const option = [
     { id: 1, name: "Account information" },
     { id: 2, name: "Default address" },

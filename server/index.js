@@ -9,6 +9,8 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 const authRouter = require("./routes/Auth");
 const profileRouter = require("./routes/Profile");
+const products = require("./routes/Product");
+const path = require("path");
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -17,9 +19,11 @@ mongoose
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use("/images", express.static(path.join(__dirname, "image")));
 
 app.use("/api", authRouter);
 app.use("/api/profile", profileRouter);
+app.use("/api/products", products);
 
 app.get("/", (req, res) => {
   res.send("API dang hoat dong");

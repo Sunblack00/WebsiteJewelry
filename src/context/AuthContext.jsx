@@ -29,7 +29,7 @@ const AuthProvider = ({ children }) => {
       setToken(savedToken);
       fetchProfile(savedToken);
     }
-  }, [1]);
+  }, []);
   const handleChange = (e) => {
     setFormRegister({
       ...formRegister,
@@ -49,10 +49,13 @@ const AuthProvider = ({ children }) => {
 
   const handleLogin = async (e) => {
     try {
-      const res = await axios.post("http://localhost:1361/api/login", {
-        email: formLogin.loginEmail,
-        password: formLogin.loginPassword,
-      });
+      const res = await axios.post(
+        "https://jewelry-backend-inrv.onrender.com/api/login",
+        {
+          email: formLogin.loginEmail,
+          password: formLogin.loginPassword,
+        }
+      );
       console.log("Login with:", formLogin);
       const token = res.data.token;
       setToken(token);
@@ -76,11 +79,14 @@ const AuthProvider = ({ children }) => {
     console.log("Registering with:", formRegister);
 
     try {
-      const res = await axios.post("http://localhost:1361/api/register", {
-        name: fullname,
-        email: formRegister.email,
-        password: formRegister.password,
-      });
+      const res = await axios.post(
+        "https://jewelry-backend-inrv.onrender.com/api/register",
+        {
+          name: fullname,
+          email: formRegister.email,
+          password: formRegister.password,
+        }
+      );
 
       alert(res.data.message);
       setFormRegister({
@@ -107,11 +113,15 @@ const AuthProvider = ({ children }) => {
 
   const fetchProfile = async (loginToken) => {
     try {
-      const res = await axios.get("http://localhost:1361/api/profile", {
-        headers: {
-          Authorization: `Bearer ${loginToken}`,
-        },
-      });
+      console.log("TOKEN ĐANG GỬI:", loginToken);
+      const res = await axios.get(
+        "https://jewelry-backend-inrv.onrender.com/api/profile",
+        {
+          headers: {
+            Authorization: `Bearer ${loginToken}`,
+          },
+        }
+      );
 
       setUser(res.data.user);
     } catch (error) {
@@ -121,9 +131,12 @@ const AuthProvider = ({ children }) => {
 
   const checkEmail = async () => {
     try {
-      const res = await axios.post("http://localhost:1361/api/verifyemail", {
-        email: formResetPwd.resetEmail,
-      });
+      const res = await axios.post(
+        "https://jewelry-backend-inrv.onrender.com/api/verifyemail",
+        {
+          email: formResetPwd.resetEmail,
+        }
+      );
       alert(res.data.message);
       return true;
     } catch (error) {
@@ -139,10 +152,13 @@ const AuthProvider = ({ children }) => {
     }
     setError("");
     try {
-      const res = await axios.post("http://localhost:1361/api/resetpassword", {
-        email: formResetPwd.resetEmail,
-        newPassword: formResetPwd.resetPassword,
-      });
+      const res = await axios.post(
+        "https://jewelry-backend-inrv.onrender.com/api/resetpassword",
+        {
+          email: formResetPwd.resetEmail,
+          newPassword: formResetPwd.resetPassword,
+        }
+      );
 
       alert(res.data.message);
     } catch (error) {

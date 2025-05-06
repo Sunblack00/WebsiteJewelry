@@ -19,6 +19,7 @@ import Profile from "./pages/Profile";
 import Account from "./pages/Account";
 import AuthProvider from "./context/AuthContext";
 import Breadcrumb from "./components/Breadcrumb";
+import CheckOut from "./pages/CheckOut";
 
 export default function App() {
   return (
@@ -37,10 +38,14 @@ export default function App() {
           <Route path="/collection/:collection" element={<Product />} />
           {/* Gộp cả 2 đường dẫn cho ProductDetail */}
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/collection/:collection/:id" element={<ProductDetail />} />
+          <Route
+            path="/collection/:collection/:id"
+            element={<ProductDetail />}
+          />
           <Route path="/account" element={<Account />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cartcheckout" element={<CheckOut />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/search" element={<SearchResults />} />
         </Routes>
