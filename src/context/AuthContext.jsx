@@ -71,7 +71,7 @@ const AuthProvider = ({ children }) => {
     console.log(fullname);
 
     if (formRegister.password !== formRegister.confirmPassword) {
-      setError("Mật khẩu không khớp!");
+      setError("Password is not match!");
       return;
     }
     setError("");
@@ -139,14 +139,14 @@ const AuthProvider = ({ children }) => {
       alert(res.data.message);
       return true;
     } catch (error) {
-      alert("Email khong hop le");
+      alert("Invalid Email");
       return false;
     }
   };
 
   const handleChangePassword = async () => {
     if (formResetPwd.resetPassword !== formResetPwd.resetPasswordConfirm) {
-      setError("Mật khẩu không khớp!");
+      setError("Password is not match!");
       return;
     }
     setError("");

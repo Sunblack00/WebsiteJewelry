@@ -7,7 +7,6 @@ require("dotenv").config();
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
-
 router.post("/register", async (req, res) => {
   console.log("Received register data:", req.body);
   const { name, email, password } = req.body;
@@ -15,9 +14,9 @@ router.post("/register", async (req, res) => {
 
   try {
     const user = await User.create({ name, email, password: hash });
-    res.json({ message: "Dang ky thanh cong" });
+    res.json({ message: "Signed in successfully." });
   } catch (error) {
-    res.status(400).json({ message: "Tai khoan da ton tai" });
+    res.status(400).json({ message: "The user already exists." });
   }
 });
 
@@ -25,12 +24,11 @@ router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
 
-  if (!user)
-    return res.status(401).json({ message: "Tai khoan khong ton tai" });
+  if (!user) return res.status(401).json({ message: "User Not Found" });
 
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch)
-    return res.status(401).json({ message: "Mat khau khong chinh xac" });
+    return res.status(401).json({ message: "Your password is incorrect." });
 
   const token = jwt.sign(
     { id: user._id, name: user.name, email: user.email },
@@ -38,24 +36,23 @@ router.post("/login", async (req, res) => {
     { expiresIn: "1h" }
   );
 
-  res.json({ message: "Dang nhap thanh cong", token, user });
+  res.json({ message: "Logged in successfully.", token, user });
 });
 
 router.post("/verifyemail", async (req, res) => {
   const { email } = req.body;
   const user = await User.findOne({ email });
 
-  if (!user) return res.status(401).json({ message: "Email khong ton tai" });
+  if (!user) return res.status(401).json({ message: "User Not Found" });
 
-  res.json({ message: "Da tim thay email duoc luu", email });
+  res.json({ message: "Valid Email!!!", email });
 });
 
 router.post("/resetpassword", async (req, res) => {
   const { email, newPassword } = req.body;
   const user = await User.findOne({ email });
 
-  if (!user)
-    return res.status(401).json({ message: "Khong tim thay tai khoan" });
+  if (!user) return res.status(401).json({ message: "User Not Found" });
 
   const hashPassword = await bcrypt.hash(newPassword, 10);
   user.password = hashPassword;
