@@ -3,6 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import AccountInfo from "../components/AccountInfo";
 import { useNavigate } from "react-router-dom";
 import OrdersInfo from "../components/OrdersInfo";
+import AddressInfo from "../components/AddressInfo";
 
 const Profile = () => {
   const navigation = useNavigate();
@@ -69,7 +70,7 @@ const Profile = () => {
         </div>
         <div>
           {isActive === "Account information" && <AccountInfo user={user} />}
-          {isActive === "Default address" && <AccountInfo user={user} />}
+          {isActive === "Default address" && <AddressInfo user={user} />}
           {isActive === "Orders" && <OrdersInfo />}
           {isActive === "Wishlist" && <AccountInfo user={user} />}
         </div>

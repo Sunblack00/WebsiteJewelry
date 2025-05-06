@@ -7,7 +7,7 @@
       "../../images/product/ring-1_a.png",
       "../../images/product/ring-1_b.png"
     ],
-   "loc": "Products", 
+    "loc": "Products",
     "options": {
       "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 17, 19, 31],
@@ -1072,28 +1072,28 @@
       "../../images/product/brooch-21_b.png"
     ],
     "options": {
-      "stones": ["Sapphire", "Amethyst", "Topaz"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["Silver", "Gold", "Platinum"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Sapphire",
+        "stone": "Diamond",
         "size": 16,
         "metal": "Silver",
         "price": 145.0,
         "quantity": 5
       },
       {
-        "stone": "Amethyst",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Gold",
         "price": 152.0,
         "quantity": 3
       },
       {
-        "stone": "Topaz",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Platinum",
         "price": 160.0,
@@ -1125,28 +1125,28 @@
       "../../images/product/brooch-22_b.png"
     ],
     "options": {
-      "stones": ["Moonstone", "Opal", "Garnet"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Rose Gold", "Silver"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Moonstone",
+        "stone": "Diamond",
         "size": 16,
         "metal": "White Gold",
         "price": 170.0,
         "quantity": 4
       },
       {
-        "stone": "Opal",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Rose Gold",
         "price": 176.0,
         "quantity": 2
       },
       {
-        "stone": "Garnet",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Silver",
         "price": 165.0,
@@ -1178,28 +1178,28 @@
       "../../images/product/brooch-23_b.png"
     ],
     "options": {
-      "stones": ["Ruby", "Sapphire", "Black Diamond"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["Gold", "Platinum", "Titanium"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Ruby",
+        "stone": "Diamond",
         "size": 16,
         "metal": "Gold",
         "price": 210.0,
         "quantity": 1
       },
       {
-        "stone": "Sapphire",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Platinum",
         "price": 230.0,
         "quantity": 2
       },
       {
-        "stone": "Black Diamond",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Titanium",
         "price": 250.0,
@@ -1231,28 +1231,28 @@
       "../../images/product/watch-24_b.png"
     ],
     "options": {
-      "stones": ["Black Diamond", "Sapphire", "Onyx"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["Titanium", "Stainless Steel", "Black Gold"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Black Diamond",
+        "stone": "Diamond",
         "size": 16,
         "metal": "Titanium",
         "price": 320.0,
         "quantity": 3
       },
       {
-        "stone": "Sapphire",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Stainless Steel",
         "price": 295.0,
         "quantity": 2
       },
       {
-        "stone": "Onyx",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Black Gold",
         "price": 340.0,
@@ -1284,14 +1284,14 @@
       "../../images/product/watch-25_b.png"
     ],
     "options": {
-      "stones": ["Opal", "Emerald", "Diamond"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["Rose Gold", "Silver", "White Gold"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Opal",
+        "stone": "Diamond",
         "size": 16,
         "metal": "Rose Gold",
         "price": 310.0,
@@ -1305,7 +1305,7 @@
         "quantity": 2
       },
       {
-        "stone": "Diamond",
+        "stone": "Ruby",
         "size": 20,
         "metal": "White Gold",
         "price": 350.0,
@@ -1337,7 +1337,7 @@
       "../../images/product/earring-26_b.png"
     ],
     "options": {
-      "stones": ["Diamond", "Aquamarine", "Blue Topaz"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["White Gold", "Platinum", "Silver"]
     },
@@ -1351,14 +1351,14 @@
         "quantity": 3
       },
       {
-        "stone": "Aquamarine",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Platinum",
         "price": 172.0,
         "quantity": 2
       },
       {
-        "stone": "Blue Topaz",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Silver",
         "price": 165.0,
@@ -1390,28 +1390,28 @@
       "../../images/product/earring-27_b.png"
     ],
     "options": {
-      "stones": ["Ruby", "Garnet", "Spinel"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["Gold", "Rose Gold", "Bronze"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Ruby",
+        "stone": "Diamond",
         "size": 16,
         "metal": "Gold",
         "price": 205.0,
         "quantity": 2
       },
       {
-        "stone": "Garnet",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Rose Gold",
         "price": 190.0,
         "quantity": 3
       },
       {
-        "stone": "Spinel",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Bronze",
         "price": 178.0,
@@ -1443,28 +1443,28 @@
       "../../images/product/earring-28_b.png"
     ],
     "options": {
-      "stones": ["Citrine", "Amber", "Topaz"],
+      "stones": ["Diamond", "Emerald", "Ruby"],
       "sizes": [16, 18, 20],
       "metals": ["Yellow Gold", "Bronze", "Brass"]
     },
     "loc": "Products",
     "variants": [
       {
-        "stone": "Citrine",
+        "stone": "Diamond",
         "size": 16,
         "metal": "Yellow Gold",
         "price": 175.0,
         "quantity": 4
       },
       {
-        "stone": "Amber",
+        "stone": "Emerald",
         "size": 18,
         "metal": "Bronze",
         "price": 160.0,
         "quantity": 2
       },
       {
-        "stone": "Topaz",
+        "stone": "Ruby",
         "size": 20,
         "metal": "Brass",
         "price": 158.0,

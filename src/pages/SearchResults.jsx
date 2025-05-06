@@ -46,9 +46,7 @@ const SearchResults = () => {
 
     // Filter products based on the query and selected type
     const filteredProducts = productList.filter((product) => {
-      const matchesQuery =
-        product.name.toLowerCase().includes(query) ||
-        product.shortDescription.toLowerCase().includes(query);
+      const matchesQuery = product.name.toLowerCase().includes(query);
       const matchesType =
         selectedType === "All" ||
         selectedType === "Product" ||
@@ -96,9 +94,7 @@ const SearchResults = () => {
         {/* Kết quả tìm kiếm */}
         <div>
           {filteredBlogs.length === 0 && filteredProducts.length === 0 ? (
-            <p className="text-center text-gray-500">
-              Không có kết quả tìm kiếm nào phù hợp.
-            </p>
+            <p className="text-center text-gray-500">No Results Match</p>
           ) : (
             <div>
               {/* Blog Results */}

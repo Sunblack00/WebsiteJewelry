@@ -56,7 +56,6 @@ const AuthProvider = ({ children }) => {
           password: formLogin.loginPassword,
         }
       );
-      console.log("Login with:", formLogin);
       const token = res.data.token;
       setToken(token);
       return token;
@@ -105,6 +104,7 @@ const AuthProvider = ({ children }) => {
     setToken(null);
     setUser(null);
     localStorage.removeItem("token");
+    localStorage.removeItem("order");
     setFormLogin({
       loginEmail: "",
       loginPassword: "",
@@ -113,7 +113,6 @@ const AuthProvider = ({ children }) => {
 
   const fetchProfile = async (loginToken) => {
     try {
-      console.log("TOKEN ĐANG GỬI:", loginToken);
       const res = await axios.get(
         "https://jewelry-backend-inrv.onrender.com/api/profile",
         {

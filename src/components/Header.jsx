@@ -8,6 +8,9 @@ import { CartContext } from "../store/CartContext";
 import { useAuth } from "../context/AuthContext";
 import MiniCart from "./Cart/MiniCart";
 import { motion, AnimatePresence } from "framer-motion";
+import CardSearchBlog from "./CardSearchBlog";
+import CardSearchProduct from "./CardSearchProduct";
+import { b } from "framer-motion/client";
 
 export default function Header() {
   const { user } = useAuth(); // FIX lỗi user undefined
@@ -19,10 +22,46 @@ export default function Header() {
   const cartIconRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const [products, setProducts] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredBlogs, setFilteredBlogs] = useState([]);
 
   useState(() => {
-    console.log(searchTerm);
-  });
+    const fetchProducts = async () => {
+      const res = await fetch(
+        "https://jewelry-backend-inrv.onrender.com/api/products"
+      );
+      const data = await res.json();
+      setProducts(data);
+    };
+    fetchProducts();
+
+    fetch("/data/blog.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setBlogs(data);
+      });
+
+    console.log("products", products);
+    console.log(blogs);
+  }, []);
+
+  useEffect(() => {
+    const filteredBlogs = blogs.filter((blog) => {
+      const matchesQuery = blog.title.toLowerCase().includes(searchTerm.trim());
+      return matchesQuery;
+    });
+    setFilteredBlogs(filteredBlogs);
+
+    const filteredProducts = products.filter((product) => {
+      const matchesQuery = product.name
+        .toLowerCase()
+        .includes(searchTerm.trim());
+      return matchesQuery;
+    });
+    setFilteredProducts(filteredProducts);
+  }, [blogs, products, searchTerm]);
 
   const dropIn = {
     hidden: {
@@ -94,7 +133,7 @@ export default function Header() {
   return (
     <>
       <div className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="md:container mx-auto flex items-center justify-between py-4 pl-20">
+        <div className=" w-[90%] mx-auto flex items-center justify-between py-4 pl-20">
           <Link to={"/"}>
             <img src={logo} alt="logo" />
           </Link>
@@ -124,7 +163,10 @@ export default function Header() {
           </ul>
 
           <div className="flex items-center space-x-8">
-            <Link to={user ? "/profile" : "/account"}>
+            <Link
+              to={user ? "/profile" : "/account"}
+              onClick={() => setActivePath(null)}
+            >
               <div className="flex items-center gap-2 hover:opacity-25 transition-all duration-500">
                 {user && (
                   <p className="text-xs">
@@ -187,7 +229,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="relative w-full h-[30%] bg-white p-20 rounded-lg shadow-lg"
+              className="relative w-full h-fit bg-white p-20 rounded-lg shadow-lg"
             >
               <button
                 className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black"
@@ -219,6 +261,40 @@ export default function Header() {
                   }}
                 />
               </div>
+              {filteredProducts.length == 0 && filteredBlogs.length == 0 && (
+                <div className="mt-6 capitalize text-center text-gray-600">
+                  No results match
+                </div>
+              )}
+
+              {searchTerm && (
+                <>
+                  <div className="mt-6 grid grid-cols-5 gap-4">
+                    {filteredProducts.slice(0, 4).map((product) => (
+                      <CardSearchProduct
+                        key={product.id}
+                        item={product}
+                        closeSearchModal={() => setIsSearchOpen(false)}
+                      />
+                    ))}
+                    {filteredBlogs.slice(0, 1).map((blog) => (
+                      <CardSearchBlog
+                        key={blog.id}
+                        item={blog}
+                        closeSearchModal={() => setIsSearchOpen(false)}
+                      />
+                    ))}
+                  </div>
+                  {filteredProducts.length + filteredBlogs.length > 5 && (
+                    <button
+                      className="mt-6 uppercase text-center tracking-widest hover:opacity-50 cursor-pointer w-full"
+                      onClick={() => handleSearchSubmit()}
+                    >
+                      View all: {filteredProducts.length + filteredBlogs.length}
+                    </button>
+                  )}
+                </>
+              )}
             </motion.div>
           </div>
         )}

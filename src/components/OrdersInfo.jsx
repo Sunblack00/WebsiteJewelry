@@ -1,17 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../store/CartContext";
+import CartItem from "./Cart/CartItem";
+import OrderInforItem from "./OrderInforItem";
 
 const OrdersInfo = () => {
-  const {
-    cartItems,
-    totalQuantity,
-    totalPrice,
-    removeFromCart,
-    updateQuantity,
-  } = useContext(CartContext);
+  const [orderItems, setOrderItems] = useState([]);
 
-  if (cartItems.length === 0) {
+  useEffect(() => {
+    const lastOrder = localStorage.getItem("order");
+    if (lastOrder) {
+      try {
+        const parse = JSON.parse(lastOrder);
+        setOrderItems(parse);
+      } catch (error) {
+        console.error("Fail to load order from localStorage");
+      }
+    }
+  }, []);
+  if (orderItems.length === 0) {
     return (
       <div className="text-start text-4xl">
         <p className="font-medium text-xl font-sans">Orders</p>
@@ -27,7 +34,15 @@ const OrdersInfo = () => {
       </div>
     );
   }
-  return <div></div>;
+  return (
+    <div>
+      <div className="ms-10">
+        {orderItems.map((item, index) => (
+          <OrderInforItem key={index} item={item} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default OrdersInfo;

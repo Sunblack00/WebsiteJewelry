@@ -1,5 +1,6 @@
 import { createContext, useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
+import { useAuth } from "../context/AuthContext";
 
 // Ham so sanh 2 selectedOption
 function compareOptions(a, b) {
@@ -18,25 +19,45 @@ export const CartContext = createContext({
 });
 
 export default function CartProvider({ children }) {
+    const { user } = useAuth();
     const [cartItems, setCartItems] = useState([]);
-    // // ✅ Load giỏ hàng từ localStorage khi app khởi động
-    // useEffect(() => {
-    //     const storedCart = localStorage.getItem("cart-items");
-    //     if (storedCart) {
-    //         try {
-    //             const parsed = JSON.parse(storedCart);
-    //             console.log("Loaded cart from localStorage:", parsed);
-    //             setCartItems(parsed);
-    //         } catch (e) {
-    //             console.error("Lỗi khi parse cart từ localStorage:", e);
-    //         }
-    //     }
-    // }, []);
+    const getCartStorageKey = () => {
+        return user ? `cart-items-${user.id}` : "cart-items-guest";
+    };
 
-    // // ✅ Tự động lưu cart vào localStorage khi cartItems thay đổi
-    // useEffect(() => {
-    //     localStorage.setItem("cart-items", JSON.stringify(cartItems));
-    // }, [cartItems]);
+    // Load gio hang tu local storage
+    useEffect(() => {
+        const storageKey = getCartStorageKey();
+        try {
+            const storedCart = localStorage.getItem(storageKey);
+            if (storedCart) {
+                const parsed = JSON.parse(storedCart);
+                if (Array.isArray(parsed)) {
+                    setCartItems(parsed);
+                } else {
+                    setCartItems([]);
+                }
+            } else {
+                setCartItems([]);
+            }
+        } catch (error) {
+            console.error(`Lỗi khi đọc giỏ hàng từ ${storageKey}:`, error);
+            setCartItems([]);
+        }
+    }, [user]); // Chay lai khi user thay doi
+
+    // Luu gio hang vao local
+    useEffect(() => {
+        const storageKey = getCartStorageKey();
+        try {
+            if (Array.isArray(cartItems)) {
+                localStorage.setItem(storageKey, JSON.stringify(cartItems));
+                console.log(`Saved cart to ${storageKey}:`, cartItems);
+            }
+        } catch (error) {
+            console.error(`Lỗi khi lưu giỏ hàng vào ${storageKey}:`, error);
+        }
+    }, [cartItems, user]); // Chay lai cartItem hoac user thay doi
 
     function handleAddItemToCart(newItem) {
         setCartItems((prevItems) => {
@@ -73,7 +94,6 @@ export default function CartProvider({ children }) {
         );
     }
     function handleUpdateQuantity(id, selectedOption, newQuantity) {
-        console.log(selectedOption, newQuantity);
         setCartItems((prevItems) =>
             prevItems.map((item) => {
                 if (
